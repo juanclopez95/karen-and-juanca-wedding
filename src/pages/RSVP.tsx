@@ -42,7 +42,7 @@ export default function RSVP() {
       <form onSubmit={handleSubmit} className="w-full max-w-xl space-y-16">
         <div className="space-y-12">
           <div className="group">
-            <label className="block text-[10px] tracking-metadata font-sans opacity-40 mb-4">FULL NAME</label>
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">FULL NAME</label>
             <input 
               required
               type="text" 
@@ -52,7 +52,7 @@ export default function RSVP() {
           </div>
 
           <div className="group">
-            <label className="block text-[10px] tracking-metadata font-sans opacity-40 mb-4">EMAIL ADDRESS</label>
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">EMAIL ADDRESS</label>
             <input 
               required
               type="email" 
@@ -62,21 +62,21 @@ export default function RSVP() {
           </div>
 
           <div className="group">
-            <label className="block text-[10px] tracking-metadata font-sans opacity-40 mb-6">WILL YOU BE ATTENDING?</label>
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-6">WILL YOU BE ATTENDING?</label>
             <div className="flex flex-col md:flex-row gap-8">
               <label className="flex items-center gap-4 cursor-pointer group">
                 <input type="radio" name="attending" value="yes" className="w-5 h-5 accent-pitch-black" required />
-                <span className="text-sm tracking-metadata font-sans">JOYFULLY ACCEPT</span>
+                <span className="text-sm tracking-metadata font-serif italic">JOYFULLY ACCEPT</span>
               </label>
               <label className="flex items-center gap-4 cursor-pointer group">
                 <input type="radio" name="attending" value="no" className="w-5 h-5 accent-pitch-black" />
-                <span className="text-sm tracking-metadata font-sans">REGRETFULLY DECLINE</span>
+                <span className="text-sm tracking-metadata font-serif italic">REGRETFULLY DECLINE</span>
               </label>
             </div>
           </div>
 
           <div className="group">
-            <label className="block text-[10px] tracking-metadata font-sans opacity-40 mb-4">DIETARY RESTRICTIONS</label>
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">DIETARY RESTRICTIONS</label>
             <textarea 
               className="w-full bg-surface-low border-b border-outline-variant/20 py-4 px-4 focus:border-pitch-black outline-none transition-colors font-serif text-xl resize-none h-32"
               placeholder="Allergies, preferences, etc."

@@ -8,7 +8,7 @@ export default function Home() {
       details: "Friday, May 22 | 5:00 PM",
       location: "La Carreta, San Isidro",
       mapUrl: "https://www.google.com/maps/place/la+carreta+lima/data=!4m2!3m1!1s0x9105c865c4d04e5b:0x3633e9a533f74a47?sa=X&ved=1t:242&ictx=111",
-      description: "Let us welcome you to Lima with an evening centered around a Traditional Peruvian Peña. Picture guitars, cajón, pisco, & local bites."
+      description: "Let us welcome you to Lima with an evening centered around a Traditional Peruvian Peña.\n\nPicture guitars, cajón, pisco, & local bites."
     },
     {
       id: "Act II: Union",
@@ -22,7 +22,7 @@ export default function Home() {
       details: "Saturday, May 23 | 6:00 PM - 2:00 AM",
       location: "Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona",
       mapUrl: "https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D",
-      description: "Arriving from the church, we’ll share a welcome cocktail and a relaxed dinner.\n\nMore importantly, we’ll dance. From our very first conversation, we knew music was our love language. This celebration is built around sound, decorated by the rhythms that shaped our time together.\n\nAnd perhaps suddenly, the rhythm deepens."
+      description: "After our Vow, we'll take a ride to the outskirts of Lima, Mamacona. \n\nThe venue is located in a sanctuary of the famous Caballo Peruano de Paso. To start the night, we'll share a welcome cocktail to a bit of rock en español. One of Juanca's most influential artists growing up was Juanes.\n\nIn our first conversations, we realized music was a love language for us. So this celebration if built around sound, decorated by the sound that shaped our time together. \n\n& perhaps, the rhythm deepens."
     }
   ];
 
@@ -59,7 +59,7 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 1 }}
-            className="text-[clamp(1.75rem,8.5vw,6.5rem)] font-serif font-normal italic tracking-[0.05em] leading-none mb-4 text-center whitespace-nowrap text-[#9a3412]"
+            className="text-[clamp(1.05rem,4.2vw,3rem)] font-serif font-normal tracking-[0.05em] leading-none mb-4 text-center whitespace-nowrap text-[#9a3412]"
           >
             KAREN & JUANCA
           </motion.h1>
@@ -68,7 +68,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-sm md:text-xl tracking-[0.2em] font-serif uppercase mb-8 text-center"
+            className="text-sm md:text-xl tracking-[0.05em] font-serif italic opacity-80 mb-8 text-center"
           >
             Lima, Perú | 23 de Mayo 2026
           </motion.div>
@@ -103,7 +103,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-4xl font-serif italic tracking-tight">{act.id}</h2>
               
               <div className="space-y-2">
-                <p className="text-xs md:text-sm tracking-metadata font-sans font-bold uppercase">{act.details}</p>
+                <p className="text-sm md:text-lg font-serif italic opacity-80">{act.details}</p>
                 <div className="space-y-1">
                   <p className="text-sm md:text-lg font-serif italic opacity-80">{act.location}</p>
                   <a 

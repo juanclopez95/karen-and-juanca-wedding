@@ -11,10 +11,6 @@ export default function Explore() {
         { name: "La Rosa Náutica", desc: "Iconic restaurant perched over the ocean waves.", eta: "5 min drive" },
         { name: "Costa Verde", desc: "The dramatic highway and beach strip below the cliffs.", eta: "5 min drive" },
         { name: "Parque del Amor", desc: "Dedicated to lovers, featuring Gaudi-inspired mosaics.", eta: "10 min walk" },
-      ],
-      images: [
-        "https://images.unsplash.com/photo-1577587230708-187fdbf4a511?auto=format&fit=crop&q=80&w=800", // Larcomar
-        "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&q=80&w=800", // Costa Verde
       ]
     },
     {
@@ -27,10 +23,6 @@ export default function Explore() {
         { name: "MAC Lima", desc: "Contemporary Art Museum with beautiful gardens.", eta: "12 min drive" },
         { name: "Dedalo", desc: "A curated gallery and shop for Peruvian handicrafts.", eta: "12 min drive" },
         { name: "Ayahuasca Restobar", desc: "A stunning converted mansion for evening cocktails.", eta: "12 min drive" },
-      ],
-      images: [
-        "https://images.unsplash.com/photo-1599147782282-982097701624?auto=format&fit=crop&q=80&w=800", // Barranco
-        "https://images.unsplash.com/photo-1531968455001-5c5277a9b111?auto=format&fit=crop&q=80&w=800", // Puente de los Suspiros
       ]
     },
     {
@@ -42,10 +34,6 @@ export default function Explore() {
         { name: "Palacio de Gobierno", desc: "Watch the changing of the guard ceremony.", eta: "35 min drive" },
         { name: "Magic Water Circuit", desc: "A Guinness record-holding fountain park.", eta: "20 min drive" },
         { name: "Casa de Aliaga", desc: "The oldest house in the Americas, owned by the same family since 1535.", eta: "35 min drive" },
-      ],
-      images: [
-        "https://images.unsplash.com/photo-1585654901283-22515e39399e?auto=format&fit=crop&q=80&w=800", // Plaza de Armas
-        "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?auto=format&fit=crop&q=80&w=800", // Cathedral
       ]
     }
   ];
@@ -86,29 +74,11 @@ export default function Explore() {
               {section.items.map((item, i) => (
                 <div key={i} className="space-y-1">
                   <p className="font-sans text-sm md:text-base leading-relaxed">
-                    <span className="font-bold">{item.name}</span> — {item.desc}
+                    <span className="font-serif italic text-lg">{item.name}</span> — {item.desc}
                   </p>
-                  <p className="text-[10px] tracking-widest font-sans opacity-40 uppercase">
+                  <p className="text-[10px] md:text-xs tracking-metadata font-serif italic opacity-40 uppercase">
                     ETA: {item.eta} from Intercontinental Hotel (Barranco)
                   </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8 pt-8">
-              {section.images.map((img, i) => (
-                <div key={i} className="w-full max-w-[300px] aspect-[3/4] overflow-hidden bg-surface-low">
-                  <img 
-                    src={img} 
-                    alt={`${section.title} ${i}`}
-                    className="w-full h-full object-cover grayscale contrast-[1.1] brightness-[0.9] hover:grayscale-0 hover:scale-105 transition-all duration-700"
-                    referrerPolicy="no-referrer"
-                    onError={(e) => {
-                      // Fallback to picsum if unsplash fails
-                      const target = e.target as HTMLImageElement;
-                      target.src = `https://picsum.photos/seed/${section.title.replace(/\s/g, '')}${i}/800/1000?grayscale`;
-                    }}
-                  />
                 </div>
               ))}
             </div>

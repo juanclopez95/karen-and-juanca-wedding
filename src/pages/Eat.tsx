@@ -105,7 +105,7 @@ export default function Eat() {
                     <h3 className="font-serif text-xl md:text-2xl italic">
                       {item.name} <span className="text-sm font-sans not-italic opacity-40 ml-2">{item.price}</span>
                     </h3>
-                    <span className="text-[10px] tracking-widest font-sans opacity-40 uppercase">
+                    <span className="text-[10px] md:text-xs tracking-metadata font-serif italic opacity-40 uppercase">
                       ETA: {item.eta} from Intercontinental Hotel
                     </span>
                   </div>
