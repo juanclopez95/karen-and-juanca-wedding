@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Newsreader", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-milk: #fef9ef;
+  --color-pitch-black: #1a1a1a;
+  --color-surface-low: #f8f3e9;
+  --color-surface-highest: #e7e2d8;
+  --color-outline-variant: #c6c6c6;
+}
+
+@layer base {
+  body {
+    @apply bg-milk text-pitch-black font-serif antialiased;
+  }
+}
+
+.editorial-margin {
+  @apply px-[clamp(1.5rem,8vw,12rem)];
+}
+
+.no-line-divider {
+  @apply h-24;
+}
+
+.glass-nav {
+  @apply bg-milk/70 backdrop-blur-[20px];
+}
+
+.image-matting {
+  @apply p-[10px] bg-white;
+}
+
+.tracking-metadata {
+  @apply tracking-[0.2em] uppercase;
+}
