@@ -64,7 +64,7 @@ export default function Eat() {
             DID YOU COME FOR US OR THE CEVICHE?
           </h1>
           <img 
-            src="/kirafood.png" 
+            src="./kirafood.png" 
             alt="Kira Food" 
             className="absolute -right-4 -top-8 md:-right-12 md:-top-12 h-20 md:h-32 w-auto object-contain rotate-[15deg] drop-shadow-xl z-10" 
             style={{

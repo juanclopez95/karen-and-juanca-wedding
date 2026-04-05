@@ -37,7 +37,7 @@ export default function Home() {
       {/* Background Image - Full Screen */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <img
-          src="/home.jpeg"
+          src="./home.jpeg"
           alt="Karen & Juanca"
           className="w-full h-full object-cover object-[center_20%] opacity-90"
           referrerPolicy="no-referrer"
@@ -170,7 +170,7 @@ export default function Home() {
 
                   for (let i = 0; i < 30; i++) {
                     const kira = document.createElement('img');
-                    kira.src = '/kira-croissant.png';
+                    kira.src = './kira-croissant.png';
                     kira.style.position = 'absolute';
                     kira.style.top = '-100px';
                     
@@ -209,7 +209,7 @@ export default function Home() {
                 <h3 className="text-xl md:text-2xl font-serif italic tracking-tighter opacity-40 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4 text-center">
                   <span>& Kira?</span>
                   <div className="flex flex-col items-center gap-1">
-                    <img src="/kira_no_bg.png" alt="Kira" className="h-16 md:h-24 w-auto object-contain" />
+                    <img src="./kira_no_bg.png" alt="Kira" className="h-16 md:h-24 w-auto object-contain" />
                     <span className="text-[8px] tracking-[0.2em] font-sans font-bold uppercase opacity-60">(CLICK ME)</span>
                   </div>
                   <span>Yes, I'm coming</span>
