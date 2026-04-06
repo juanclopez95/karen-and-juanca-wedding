@@ -63,7 +63,7 @@ export default function Style() {
               <div className="p-8 border border-pitch-black/10 flex flex-col h-full">
                 <div className="mb-8 space-y-4">
                   <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">Act I: Prelude</p>
-                  <h3 className="text-2xl font-serif italic">Sunset Chic —</h3>
+                  <h3 className="text-2xl font-serif italic">Cocktail Chic —</h3>
                   <p className="font-sans text-sm leading-relaxed opacity-80">
                     <span className="font-bold uppercase tracking-wider">ACT I: WELCOME PARTY.</span> Casual Chic. Think stylish comfort for a sunset gathering. <span className="italic opacity-70">Beauty: Soft, natural makeup with undone texture or a relaxed ponytail.</span>
                   </p>
