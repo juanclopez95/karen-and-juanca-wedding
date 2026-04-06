@@ -87,7 +87,7 @@ export default function Style() {
                   <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">Act II & III: Portal</p>
                   <h3 className="text-2xl font-serif italic">Fashionably Elegant —</h3>
                   <p className="font-sans text-sm leading-relaxed opacity-80">
-                    <span className="font-bold uppercase tracking-wider">ACTS II & III: WEDDING CEREMONY & RECEPTION.</span> Fashionably elegant, Suit & Tie, but spice it up. <span className="italic opacity-70">Ceremony is on grass; please consider block heels or flats.</span>
+                    <span className="font-bold uppercase tracking-wider">ACTS II & III: WEDDING CEREMONY & RECEPTION.</span> Long dress, Suit & Tie, but make it fun instead.
                   </p>
                 </div>
                 <div className="w-full overflow-hidden rounded-sm mt-auto">

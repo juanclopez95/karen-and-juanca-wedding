@@ -8,6 +8,7 @@ import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-ro
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/src/lib/utils";
 import Home from "./pages/Home";
+import Peru from "./pages/Peru";
 import RSVP from "./pages/RSVP";
 import Eat from "./pages/Eat";
 import Explore from "./pages/Explore";
@@ -26,8 +27,9 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isPeruVersion = location.pathname === "/peru";
   const navItems = [
-    { name: "HOME", path: "/" },
+    { name: "HOME", path: isPeruVersion ? "/peru" : "/" },
     { name: "EAT", path: "/eat" },
     { name: "EXPLORE", path: "/explore" },
     { name: "STYLE", path: "/style" },
@@ -80,6 +82,7 @@ export default function App() {
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/peru" element={<Peru />} />
               <Route path="/eat" element={<Eat />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/style" element={<Style />} />
