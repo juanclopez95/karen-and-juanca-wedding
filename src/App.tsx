@@ -36,7 +36,7 @@ function Navbar() {
   const isPeruVersion = isPeruEntry || sessionStorage.getItem("peruContext") === "1";
   const navItems = [
     { name: "HOME", path: isPeruVersion ? "/peru" : "/" },
-    { name: "EAT", path: "/eat" },
+    ...(!isPeruVersion ? [{ name: "EAT", path: "/eat" }] : []),
     { name: "EXPLORE", path: "/explore" },
     { name: "STYLE", path: "/style" },
     { name: "FAQ", path: "/faq" },

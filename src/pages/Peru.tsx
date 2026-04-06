@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 export default function Peru() {
   const acts = [
     {
-      id: "Act II: Union",
-      details: "Saturday, May 23 | 3:30 PM",
+      id: "Acto II: Unión",
+      details: "Sábado, 23 de mayo | 3:30 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
-      description: "We reconvene for a sacred promise. A moment of quiet before the storm. A sacred space where we commit to the rhythm we've built together."
+      description: "Nos reunimos para una promesa sagrada. Un momento de quietud antes de la tormenta. Un espacio sagrado donde nos comprometemos al ritmo que hemos construido juntos."
     },
     {
-      id: "Act III: Celebration",
-      details: "Saturday, May 23 | 6:00 PM - 2:00 AM",
+      id: "Acto III: Celebración",
+      details: "Sábado, 23 de mayo | 6:00 PM - 2:00 AM",
       location: "Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona",
       mapUrl: "https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D",
-      description: "After our Vow, we'll take a ride to the outskirts of Lima, Mamacona. \n\nThe venue is located in a sanctuary of the famous Caballo Peruano de Paso.\n\nIn our first conversations, we realized music was a love language for us. So this celebration is decorated by the sound that shaped our time together. \n\n& perhaps, the rhythm deepens."
+      description: "Tras nuestros votos, partiremos hacia las afueras de Lima, Mamacona.\n\nEl lugar se encuentra en un santuario del famoso Caballo Peruano de Paso.\n\nDesde nuestras primeras conversaciones, descubrimos que la música era nuestro idioma del amor. Así que esta celebración está adornada por los sonidos que marcaron nuestro tiempo juntos.\n\n& quizás, el ritmo se profundice."
     }
   ];
 
@@ -102,7 +102,7 @@ export default function Peru() {
                     rel="noopener noreferrer"
                     className="text-[10px] tracking-[0.2em] font-sans font-bold underline hover:opacity-60 transition-opacity block"
                   >
-                    (DIRECTIONS)
+                    (CÓMO LLEGAR)
                   </a>
                 </div>
               </div>
@@ -123,14 +123,14 @@ export default function Peru() {
             transition={{ delay: 0.5 }}
             className="w-full flex flex-col items-center text-center space-y-8 pt-8"
           >
-            <h2 className="text-2xl md:text-4xl font-serif italic tracking-tight">Registry</h2>
+            <h2 className="text-2xl md:text-4xl font-serif italic tracking-tight">Lista de Regalos</h2>
 
             <div className="space-y-4">
               <p className="text-sm md:text-base font-serif leading-relaxed max-w-lg opacity-90">
-                Your presence is what matters most.
+                Tu presencia es lo que más importa.
               </p>
               <p className="text-sm md:text-base font-serif leading-relaxed max-w-lg opacity-90">
-                For those that wish to gift, find our registry here:
+                Para quienes deseen obsequiar algo, encuentren nuestra lista aquí:
               </p>
             </div>
 
@@ -140,7 +140,7 @@ export default function Peru() {
               rel="noopener noreferrer"
               className="px-8 py-3 border border-pitch-black text-[10px] tracking-[0.3em] font-sans font-bold hover:bg-pitch-black hover:text-milk transition-colors uppercase"
             >
-              Karen & Juanca Registry
+              Lista de Karen & Juanca
             </a>
 
             {/* Kira Confetti Trigger */}
@@ -198,9 +198,9 @@ export default function Peru() {
                   <span>& Kira?</span>
                   <div className="flex flex-col items-center gap-1">
                     <img src="./kira_no_bg.png" alt="Kira" className="h-16 md:h-24 w-auto object-contain" />
-                    <span className="text-[8px] tracking-[0.2em] font-sans font-bold uppercase opacity-60">(CLICK ME)</span>
+                    <span className="text-[8px] tracking-[0.2em] font-sans font-bold uppercase opacity-60">(TÓCAME)</span>
                   </div>
-                  <span>Yes, I'm coming</span>
+                  <span>Sí, voy</span>
                 </h3>
                 <div className="w-12 h-[1px] bg-pitch-black opacity-20 group-hover:w-24 group-hover:opacity-100 transition-all duration-700" />
               </button>
