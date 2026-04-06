@@ -27,7 +27,13 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isPeruVersion = location.pathname === "/peru";
+  // Persist peru context: if user entered via /peru, keep them in the peru experience
+  // across all sub-pages (Eat, Style, etc.) so HOME never routes back to Act I.
+  const isPeruEntry = location.pathname === "/peru";
+  useEffect(() => {
+    if (isPeruEntry) sessionStorage.setItem("peruContext", "1");
+  }, [isPeruEntry]);
+  const isPeruVersion = isPeruEntry || sessionStorage.getItem("peruContext") === "1";
   const navItems = [
     { name: "HOME", path: isPeruVersion ? "/peru" : "/" },
     { name: "EAT", path: "/eat" },
