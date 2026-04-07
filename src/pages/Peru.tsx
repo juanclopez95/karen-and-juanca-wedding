@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 export default function Peru() {
   const acts = [
     {
-      id: "Acto II: Unión",
+      id: "Acto I: Unión",
       details: "Sábado, 23 de mayo | 3:30 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
-      description: "Nos reunimos para una promesa sagrada. Un momento de quietud antes de la tormenta. Un espacio sagrado donde nos comprometemos al ritmo que hemos construido juntos."
+      description: "El sí, ante Dios y los nuestros."
     },
     {
-      id: "Acto III: Celebración",
+      id: "Acto II: Celebración",
       details: "Sábado, 23 de mayo | 6:00 PM - 2:00 AM",
       location: "Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona",
       mapUrl: "https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D",
-      description: "Tras nuestros votos, partiremos hacia las afueras de Lima, Mamacona.\n\nEl lugar se encuentra en un santuario del famoso Caballo Peruano de Paso.\n\nDesde nuestras primeras conversaciones, descubrimos que la música era nuestro idioma del amor. Así que esta celebración está adornada por los sonidos que marcaron nuestro tiempo juntos.\n\n& quizás, el ritmo se profundice."
+      description: "La fiesta en Mamacona."
     }
   ];
 

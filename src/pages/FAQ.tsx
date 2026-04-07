@@ -1,9 +1,11 @@
 import { motion } from "motion/react";
 
 export default function FAQ() {
-  const faqs = [
-    { 
-      q: "How do I move around?", 
+  const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
+
+  const faqsEn = [
+    {
+      q: "How do I move around?",
       a: (
         <div className="space-y-6">
           <div className="space-y-2">
@@ -31,7 +33,7 @@ export default function FAQ() {
 
           <div className="space-y-2">
             <p className="font-serif italic text-sm tracking-metadata opacity-60">The Venues</p>
-            <p>The ceremony is at <a href="https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9" target="_blank" rel="noopener noreferrer" className="italic underline">Parroquia Nuestra Señora de Fátima</a>. It’s an easy walk from the recommended hotels or a quick Uber ride.</p>
+            <p>The ceremony is at <a href="https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9" target="_blank" rel="noopener noreferrer" className="italic underline">Parroquia Nuestra Señora de Fátima</a>. It's an easy walk from the recommended hotels or a quick Uber ride.</p>
             <p>The celebration is 40 minutes away at the <a href="https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="italic underline">Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona</a>. Please consider Lima traffic when planning your departure.</p>
           </div>
         </div>
@@ -41,8 +43,8 @@ export default function FAQ() {
       q: "Flights",
       a: (
         <div className="space-y-6">
-          <p>We recommend arriving <span className="font-bold">Thursday May 21</span> to experience everything we’ve planned.</p>
-          
+          <p>We recommend arriving <span className="font-bold">Thursday May 21</span> to experience everything we've planned.</p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
               <p className="font-serif italic text-sm tracking-metadata opacity-60">From Bogotá</p>
@@ -67,7 +69,7 @@ export default function FAQ() {
       a: (
         <div className="space-y-8">
           <p>To make the most out of Lima, we recommend staying in <span className="font-bold">Miraflores</span>. All hotels listed below are a short walk from each other and the church.</p>
-          
+
           <div className="space-y-6">
             <div className="space-y-2">
               <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
@@ -75,7 +77,7 @@ export default function FAQ() {
                 <p className="font-sans text-sm font-bold">$220/night</p>
               </div>
               <p className="text-sm opacity-80 leading-relaxed">
-                To reserve, contact <a href="mailto:reservas.limha@R-HR.COM" className="underline">reservas.limha@R-HR.COM</a> and mention <span className="italic">“boda Juan Carlos López y Karen Telge”</span> in the subject line to secure the preferred rate.
+                To reserve, contact <a href="mailto:reservas.limha@R-HR.COM" className="underline">reservas.limha@R-HR.COM</a> and mention <span className="italic">"boda Juan Carlos López y Karen Telge"</span> in the subject line to secure the preferred rate.
               </p>
             </div>
 
@@ -93,7 +95,7 @@ export default function FAQ() {
                 </div>
               </div>
               <p className="text-sm opacity-80 leading-relaxed">
-                To reserve with the preferred rate at AC Hotel or Aloft, contact <a href="mailto:corporativo@intursa.com.pe" className="underline">corporativo@intursa.com.pe</a> (they manage both hotels). Make sure to mention <span className="italic">“Boda Karen y Juanca”</span> in the subject line to secure the rates listed above.
+                To reserve with the preferred rate at AC Hotel or Aloft, contact <a href="mailto:corporativo@intursa.com.pe" className="underline">corporativo@intursa.com.pe</a> (they manage both hotels). Make sure to mention <span className="italic">"Boda Karen y Juanca"</span> in the subject line to secure the rates listed above.
               </p>
             </div>
           </div>
@@ -127,10 +129,10 @@ export default function FAQ() {
         <div className="space-y-4">
           <p>Your presence is what matters most.</p>
           <p>For those that wish to gift, find our registry here:</p>
-          <a 
-            href="https://withjoy.com/karen-and-juanca/registry/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://withjoy.com/karen-and-juanca/registry/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-6 py-3 border border-pitch-black text-[10px] tracking-[0.3em] font-sans font-bold hover:bg-pitch-black hover:text-milk transition-colors uppercase"
           >
             Karen & Juanca Registry
@@ -138,40 +140,153 @@ export default function FAQ() {
         </div>
       )
     },
-    { 
-      q: "What’s the weather like?", 
-      a: "May in Lima is soft and dry—65 to 75°F. The days are pleasant, but the nights invite layers or a chal as the coastal breeze picks up." 
+    {
+      q: "What's the weather like?",
+      a: "May in Lima is soft and dry—65 to 75°F. The days are pleasant, but the nights invite layers or a chal as the coastal breeze picks up."
     },
-    { 
-      q: "Can I bring kids?", 
-      a: "The celebration is adults-only. If you are traveling with family, please reach out and we can offer trusted caretaker or nanny options for the evening." 
+    {
+      q: "Can I bring kids?",
+      a: "The celebration is adults-only. If you are traveling with family, please reach out and we can offer trusted caretaker or nanny options for the evening."
     },
-    { 
-      q: "Do I need a visa?", 
+    {
+      q: "Do I need a visa?",
       a: (
         <div className="space-y-4">
-          <p>Please check your country’s specific guidelines. American and Colombian passports are typically valid to enter Peru for tourism for up to 90 days.</p>
+          <p>Please check your country's specific guidelines. American and Colombian passports are typically valid to enter Peru for tourism for up to 90 days.</p>
           <p className="font-bold border-l-2 border-pitch-black pl-4 py-1">
             CRITICAL: Your passport must be valid for at least six months post-departure date. Peru is strict on this and will deny entry otherwise.
           </p>
         </div>
       )
     },
-    { 
-      q: "More questions?", 
-      a: "Reach out to either of us directly if you need anything. You’ll also receive a link to join our guest WhatsApp group leading up to the wedding where we will share further details and live updates." 
+    {
+      q: "More questions?",
+      a: "Reach out to either of us directly if you need anything. You'll also receive a link to join our guest WhatsApp group leading up to the wedding where we will share further details and live updates."
     },
   ];
 
+  const faqsEs = [
+    {
+      q: "¿Cómo me muevo?",
+      a: (
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <p className="font-serif italic text-sm tracking-metadata opacity-60">Shuttles</p>
+            <p>Habrá shuttles de la iglesia a la celebración y de regreso. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Por favor confirma tu asistencia</a> para asegurar tu lugar. Los shuttles regresan a Lima a las 11:00 PM y 2:00 AM, con parada en el <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Barranco)</a>.</p>
+            <p className="text-sm opacity-70 italic">Si te pierdes el shuttle, el local es accesible por Uber, taxi o chofer privado.</p>
+          </div>
+
+          <div className="space-y-2">
+            <p className="font-serif italic text-sm tracking-metadata opacity-60">Servicios privados de confianza</p>
+            <ul className="space-y-1 italic">
+              <li>
+                <a href="https://wa.me/+51992784251" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-60">
+                  A&C Remisse — Escríbele a Carlos por WhatsApp.
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/+51991479547" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-60">
+                  Transporte Security — Escríbele a Mario por WhatsApp.
+                </a>
+              </li>
+            </ul>
+            <p className="text-sm opacity-70">Atienden grupos y traslados desde el aeropuerto o hacia el local.</p>
+          </div>
+
+          <div className="space-y-2">
+            <p className="font-serif italic text-sm tracking-metadata opacity-60">Los locales</p>
+            <p>La ceremonia es en la <a href="https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9" target="_blank" rel="noopener noreferrer" className="italic underline">Parroquia Nuestra Señora de Fátima</a>.</p>
+            <p>La celebración es a 40 minutos en la <a href="https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="italic underline">Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona</a>. Ten en cuenta el tráfico de Lima.</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      q: "Hospedaje",
+      a: (
+        <div className="space-y-8">
+          <p>Para aprovechar Lima al máximo, recomendamos quedarse en <span className="font-bold">Miraflores</span>. Todos los hoteles están a pocos pasos entre sí y de la iglesia.</p>
+
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
+                <p className="font-serif text-xl italic">Intercontinental Hotel (Barranco)</p>
+                <p className="font-sans text-sm font-bold">$220/noche</p>
+              </div>
+              <p className="text-sm opacity-80 leading-relaxed">
+                Para reservar, escribe a <a href="mailto:reservas.limha@R-HR.COM" className="underline">reservas.limha@R-HR.COM</a> mencionando <span className="italic">"boda Juan Carlos López y Karen Telge"</span> en el asunto para obtener la tarifa especial.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
+                  <p className="font-serif text-xl italic">AC Hotel</p>
+                  <p className="font-sans text-sm font-bold">$170/noche</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
+                  <p className="font-serif text-xl italic">Aloft</p>
+                  <p className="font-sans text-sm font-bold">$100/noche</p>
+                </div>
+              </div>
+              <p className="text-sm opacity-80 leading-relaxed">
+                Para reservar con tarifa especial en AC Hotel o Aloft, escribe a <a href="mailto:corporativo@intursa.com.pe" className="underline">corporativo@intursa.com.pe</a> (gestionan ambos hoteles). Menciona <span className="italic">"Boda Karen y Juanca"</span> en el asunto.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-sm opacity-60 italic pt-4">
+            También puedes encontrar opciones en Airbnb o Wynwood House.
+          </p>
+        </div>
+      )
+    },
+    {
+      q: "Lista de Regalos",
+      a: (
+        <div className="space-y-4">
+          <p>Tu presencia es lo que más importa.</p>
+          <p>Para quienes deseen obsequiar algo, encuentren nuestra lista aquí:</p>
+          <a
+            href="https://withjoy.com/karen-and-juanca/registry/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 border border-pitch-black text-[10px] tracking-[0.3em] font-sans font-bold hover:bg-pitch-black hover:text-milk transition-colors uppercase"
+          >
+            Lista de Karen & Juanca
+          </a>
+        </div>
+      )
+    },
+    {
+      q: "¿Cómo está el clima?",
+      a: "Mayo en Lima es suave y seco — entre 18 y 24°C. Los días son agradables, pero las noches invitan a llevar una capa extra con la brisa costera."
+    },
+    {
+      q: "¿Puedo traer niños?",
+      a: "La celebración es solo para adultos. Si viajas con familia, escríbenos y podemos sugerirte opciones de niñera de confianza para esa noche."
+    },
+    {
+      q: "¿Más preguntas?",
+      a: "Escríbenos directamente si necesitas algo. También recibirás un enlace para unirte al grupo de WhatsApp de invitados donde compartiremos detalles y actualizaciones en vivo."
+    },
+  ];
+
+  const faqs = isPeruVersion ? faqsEs : faqsEn;
+
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="pt-40 editorial-margin min-h-screen flex flex-col items-center space-y-40 pb-40"
     >
       <div className="text-center space-y-6">
         <h1 className="text-6xl md:text-8xl font-serif italic tracking-tight">FAQ</h1>
-        <p className="text-[10px] tracking-metadata font-sans opacity-40">Frequently Asked Questions</p>
+        <p className="text-[10px] tracking-metadata font-sans opacity-40">
+          {isPeruVersion ? "Preguntas Frecuentes" : "Frequently Asked Questions"}
+        </p>
       </div>
 
       <div className="w-full max-w-3xl space-y-24">

@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useState, type FormEvent } from "react";
 
 export default function RSVP() {
+  const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
@@ -11,84 +12,99 @@ export default function RSVP() {
 
   if (submitted) {
     return (
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="pt-40 editorial-margin min-h-screen flex flex-col items-center justify-center text-center"
       >
         <h1 className="text-6xl md:text-8xl font-serif italic mb-12 tracking-tight">Gracias.</h1>
         <p className="max-w-md leading-loose font-sans text-lg opacity-80">
-          We have received your response. We look forward to celebrating with you in Lima.
+          {isPeruVersion
+            ? "Recibimos tu respuesta. Esperamos celebrar contigo en Lima."
+            : "We have received your response. We look forward to celebrating with you in Lima."
+          }
         </p>
-        <button 
+        <button
           onClick={() => setSubmitted(false)}
           className="mt-16 text-xs tracking-metadata font-sans border-b border-pitch-black pb-2 hover:opacity-50 transition-opacity"
         >
-          BACK TO FORM
+          {isPeruVersion ? "VOLVER AL FORMULARIO" : "BACK TO FORM"}
         </button>
       </motion.div>
     );
   }
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="pt-40 editorial-margin min-h-screen flex flex-col items-center"
     >
       <h1 className="text-6xl md:text-8xl font-serif italic mb-20 tracking-tight">RSVP</h1>
-      
+
       <form onSubmit={handleSubmit} className="w-full max-w-xl space-y-16">
         <div className="space-y-12">
           <div className="group">
-            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">FULL NAME</label>
-            <input 
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">
+              {isPeruVersion ? "NOMBRE COMPLETO" : "FULL NAME"}
+            </label>
+            <input
               required
-              type="text" 
+              type="text"
               className="w-full bg-surface-low border-b border-outline-variant/20 py-4 px-4 focus:border-pitch-black outline-none transition-colors font-serif text-xl"
-              placeholder="Your Name"
+              placeholder={isPeruVersion ? "Tu nombre" : "Your Name"}
             />
           </div>
 
           <div className="group">
-            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">EMAIL ADDRESS</label>
-            <input 
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">
+              {isPeruVersion ? "CORREO ELECTRÓNICO" : "EMAIL ADDRESS"}
+            </label>
+            <input
               required
-              type="email" 
+              type="email"
               className="w-full bg-surface-low border-b border-outline-variant/20 py-4 px-4 focus:border-pitch-black outline-none transition-colors font-serif text-xl"
               placeholder="email@example.com"
             />
           </div>
 
           <div className="group">
-            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-6">WILL YOU BE ATTENDING?</label>
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-6">
+              {isPeruVersion ? "¿ASISTIRÁS?" : "WILL YOU BE ATTENDING?"}
+            </label>
             <div className="flex flex-col md:flex-row gap-8">
               <label className="flex items-center gap-4 cursor-pointer group">
                 <input type="radio" name="attending" value="yes" className="w-5 h-5 accent-pitch-black" required />
-                <span className="text-sm tracking-metadata font-serif italic">JOYFULLY ACCEPT</span>
+                <span className="text-sm tracking-metadata font-serif italic">
+                  {isPeruVersion ? "CON GUSTO ACEPTO" : "JOYFULLY ACCEPT"}
+                </span>
               </label>
               <label className="flex items-center gap-4 cursor-pointer group">
                 <input type="radio" name="attending" value="no" className="w-5 h-5 accent-pitch-black" />
-                <span className="text-sm tracking-metadata font-serif italic">REGRETFULLY DECLINE</span>
+                <span className="text-sm tracking-metadata font-serif italic">
+                  {isPeruVersion ? "CON PENA DECLINO" : "REGRETFULLY DECLINE"}
+                </span>
               </label>
             </div>
           </div>
 
           <div className="group">
-            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">DIETARY RESTRICTIONS</label>
-            <textarea 
+            <label className="block text-sm tracking-metadata font-serif italic opacity-40 mb-4">
+              {isPeruVersion ? "RESTRICCIONES ALIMENTARIAS" : "DIETARY RESTRICTIONS"}
+            </label>
+            <textarea
               className="w-full bg-surface-low border-b border-outline-variant/20 py-4 px-4 focus:border-pitch-black outline-none transition-colors font-serif text-xl resize-none h-32"
-              placeholder="Allergies, preferences, etc."
+              placeholder={isPeruVersion ? "Alergias, preferencias, etc." : "Allergies, preferences, etc."}
             />
           </div>
         </div>
 
-        <button 
+        <button
           type="submit"
           className="w-full bg-pitch-black text-milk py-6 text-xs tracking-[0.4em] font-sans hover:bg-surface-highest hover:text-pitch-black transition-all"
         >
-          SUBMIT RESPONSE
+          {isPeruVersion ? "ENVIAR RESPUESTA" : "SUBMIT RESPONSE"}
         </button>
       </form>
     </motion.div>

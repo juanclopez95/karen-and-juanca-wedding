@@ -35,11 +35,12 @@ function Navbar() {
   }, [isPeruEntry]);
   const isPeruVersion = isPeruEntry || sessionStorage.getItem("peruContext") === "1";
   const navItems = [
-    { name: "HOME", path: isPeruVersion ? "/peru" : "/" },
+    { name: isPeruVersion ? "INICIO" : "HOME", path: isPeruVersion ? "/peru" : "/" },
     ...(!isPeruVersion ? [{ name: "EAT", path: "/eat" }] : []),
-    { name: "EXPLORE", path: "/explore" },
-    { name: "STYLE", path: "/style" },
-    { name: "FAQ", path: "/faq" },
+    ...(!isPeruVersion ? [{ name: "EXPLORE", path: "/explore" }] : []),
+    { name: isPeruVersion ? "ESTILO" : "STYLE", path: "/style" },
+    { name: isPeruVersion ? "PREGUNTAS" : "FAQ", path: "/faq" },
+    { name: "RSVP", path: "/rsvp" },
   ];
 
   return (
