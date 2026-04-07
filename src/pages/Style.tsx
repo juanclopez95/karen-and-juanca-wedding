@@ -75,7 +75,7 @@ export default function Style() {
                     <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">Act I: Prelude</p>
                     <h3 className="text-2xl font-serif italic">Cocktail Chic —</h3>
                     <p className="font-sans text-sm leading-relaxed opacity-80">
-                      <span className="font-bold uppercase tracking-wider">ACT I: WELCOME PARTY.</span> Casual Chic. Think stylish comfort for a sunset gathering. <span className="italic opacity-70">Beauty: Soft, natural makeup with undone texture or a relaxed ponytail.</span>
+                      <span className="font-bold uppercase tracking-wider">ACT I: WELCOME PARTY.</span> Think stylish comfort for a sunset gathering. <span className="italic opacity-70">Beauty: Soft, natural makeup with undone texture or a relaxed ponytail.</span>
                     </p>
                   </div>
                   <div className="w-full overflow-hidden rounded-sm mt-auto">
