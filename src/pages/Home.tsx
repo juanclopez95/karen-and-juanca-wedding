@@ -198,37 +198,37 @@ export default function Home() {
                   container.style.zIndex = '9999';
                   document.body.appendChild(container);
 
-                  for (let i = 0; i < 20; i++) {
-                    const delay = i * 80; // stagger each dog by 80ms
+                  // Each dog flies from left to right in an ascending arc
+                  for (let i = 0; i < 12; i++) {
+                    const delay = i * 180; // stagger so they feel like a parade
                     setTimeout(() => {
                       const kira = document.createElement('img');
                       kira.src = './kira-dog.png';
-                      kira.style.position = 'absolute';
-                      kira.style.bottom = '-120px';
-                      kira.style.top = 'auto';
+                      kira.style.position = 'fixed';
+                      kira.style.width = '100px';
+                      kira.style.imageRendering = 'auto';
 
-                      const startX = 5 + Math.random() * 90;
-                      kira.style.left = startX + 'vw';
-                      kira.style.width = '90px';
+                      // Start: off-screen left, random vertical band (lower half of screen)
+                      const startY = 50 + Math.random() * 35; // 50–85% down
+                      const endY = 5 + Math.random() * 35;    // 5–40% down (ascending)
+                      const duration = 2.8 + Math.random() * 1.4; // 2.8–4.2s
 
-                      const duration = 3.5 + Math.random() * 2.5; // 3.5–6s, slow enough to see
-                      const tilt = (Math.random() - 0.5) * 30; // gentle tilt max ±15deg
-                      const scale = 0.7 + Math.random() * 0.5;
-                      const horizontalDrift = (Math.random() - 0.5) * 20;
-
-                      kira.style.transform = `scale(${scale}) rotate(${tilt}deg)`;
-                      kira.style.transition = `bottom ${duration}s cubic-bezier(0.2, 0.8, 0.4, 1), left ${duration}s ease-in-out`;
+                      kira.style.left = '-120px';
+                      kira.style.top = startY + 'vh';
+                      // Slight upward tilt to suggest flight
+                      kira.style.transform = 'scaleX(-1) rotate(-12deg)';
+                      kira.style.transition = `left ${duration}s cubic-bezier(0.25, 0.1, 0.6, 1), top ${duration}s cubic-bezier(0.4, 0, 0.2, 1)`;
 
                       container.appendChild(kira);
                       kira.getBoundingClientRect(); // force reflow
 
-                      kira.style.bottom = '110vh';
-                      kira.style.left = (startX + horizontalDrift) + 'vw';
+                      kira.style.left = '110vw';
+                      kira.style.top = endY + 'vh';
 
                       setTimeout(() => {
                         kira.remove();
                         if (container.children.length === 0) container.remove();
-                      }, duration * 1000 + 200);
+                      }, duration * 1000 + 300);
                     }, delay);
                   }
                 }}

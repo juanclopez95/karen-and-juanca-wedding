@@ -180,38 +180,35 @@ export default function Peru() {
                   container.style.zIndex = '9999';
                   document.body.appendChild(container);
 
-                  for (let i = 0; i < 30; i++) {
-                    const kira = document.createElement('img');
-                    kira.src = './kira-dog.png';
-                    kira.style.position = 'absolute';
-                    kira.style.top = '-100px';
-
-                    const startX = Math.random() * 100;
-                    kira.style.left = startX + 'vw';
-                    kira.style.width = '60px';
-
-                    const duration = 2 + Math.random() * 2;
-                    const rotation = 360 + Math.random() * 720;
-                    const direction = Math.random() > 0.5 ? 1 : -1;
-                    const scale = 0.5 + Math.random() * 0.7;
-                    const horizontalSpread = (Math.random() - 0.5) * 40;
-
-                    kira.style.transform = `scale(${scale}) rotate(0deg)`;
-                    kira.style.transition = `top ${duration}s cubic-bezier(0.25, 0.46, 0.45, 0.94), left ${duration}s linear, transform ${duration}s linear`;
-
-                    container.appendChild(kira);
-                    kira.getBoundingClientRect();
-
-                    kira.style.top = '110vh';
-                    kira.style.left = (startX + horizontalSpread) + 'vw';
-                    kira.style.transform = `scale(${scale}) rotate(${rotation * direction}deg)`;
-
+                  for (let i = 0; i < 12; i++) {
+                    const delay = i * 180;
                     setTimeout(() => {
-                      kira.remove();
-                      if (container.children.length === 0) {
-                        container.remove();
-                      }
-                    }, duration * 1000);
+                      const kira = document.createElement('img');
+                      kira.src = './kira-dog.png';
+                      kira.style.position = 'fixed';
+                      kira.style.width = '100px';
+                      kira.style.imageRendering = 'auto';
+
+                      const startY = 50 + Math.random() * 35;
+                      const endY = 5 + Math.random() * 35;
+                      const duration = 2.8 + Math.random() * 1.4;
+
+                      kira.style.left = '-120px';
+                      kira.style.top = startY + 'vh';
+                      kira.style.transform = 'scaleX(-1) rotate(-12deg)';
+                      kira.style.transition = `left ${duration}s cubic-bezier(0.25, 0.1, 0.6, 1), top ${duration}s cubic-bezier(0.4, 0, 0.2, 1)`;
+
+                      container.appendChild(kira);
+                      kira.getBoundingClientRect();
+
+                      kira.style.left = '110vw';
+                      kira.style.top = endY + 'vh';
+
+                      setTimeout(() => {
+                        kira.remove();
+                        if (container.children.length === 0) container.remove();
+                      }, duration * 1000 + 300);
+                    }, delay);
                   }
                 }}
                 className="group flex flex-col items-center space-y-2 focus:outline-none"
