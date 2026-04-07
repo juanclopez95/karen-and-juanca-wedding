@@ -39,10 +39,13 @@ export default function Peru() {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center pt-8 pb-2 px-4">
+        <div className="flex flex-col items-center pt-8 pb-8 px-4 space-y-4">
           <h1 className="text-[clamp(1.6rem,8vw,2.8rem)] font-serif font-normal tracking-[0.04em] text-[#9a3412] text-center">
             KAREN &amp; JUANCA
           </h1>
+          <p className="text-sm tracking-[0.05em] font-serif italic opacity-70 text-center">
+            Lima, Perú | 23 de Mayo 2026
+          </p>
         </div>
       </div>
 
@@ -179,7 +182,7 @@ export default function Peru() {
 
                   for (let i = 0; i < 30; i++) {
                     const kira = document.createElement('img');
-                    kira.src = './kira-croissant.png';
+                    kira.src = './kira-dog.png';
                     kira.style.position = 'absolute';
                     kira.style.top = '-100px';
 

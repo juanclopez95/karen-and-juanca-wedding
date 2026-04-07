@@ -46,10 +46,21 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center pt-8 pb-2 px-4">
+        <div className="flex flex-col items-center pt-8 pb-8 px-4 space-y-4">
           <h1 className="text-[clamp(1.6rem,8vw,2.8rem)] font-serif font-normal tracking-[0.04em] text-[#9a3412] text-center">
             KAREN &amp; JUANCA
           </h1>
+          <p className="text-sm tracking-[0.05em] font-serif italic opacity-70 text-center">
+            Lima, Perú | 23 de Mayo 2026
+          </p>
+          <a
+            href="https://withjoy.com/karen-and-juanca/rsvp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 border border-pitch-black text-[10px] tracking-[0.3em] font-sans font-bold hover:bg-pitch-black hover:text-milk transition-colors"
+          >
+            RSVP
+          </a>
         </div>
       </div>
 
@@ -187,40 +198,38 @@ export default function Home() {
                   container.style.zIndex = '9999';
                   document.body.appendChild(container);
 
-                  for (let i = 0; i < 30; i++) {
-                    const kira = document.createElement('img');
-                    kira.src = './kira-dog.png';
-                    kira.style.position = 'absolute';
-                    kira.style.top = '-100px';
-                    
-                    const startX = Math.random() * 100;
-                    kira.style.left = startX + 'vw';
-                    kira.style.width = '60px';
-                    
-                    const duration = 2 + Math.random() * 2;
-                    const rotation = 360 + Math.random() * 720;
-                    const direction = Math.random() > 0.5 ? 1 : -1;
-                    const scale = 0.5 + Math.random() * 0.7;
-                    const horizontalSpread = (Math.random() - 0.5) * 40; // Spread up to 20vw left or right
-
-                    kira.style.transform = `scale(${scale}) rotate(0deg)`;
-                    kira.style.transition = `top ${duration}s cubic-bezier(0.25, 0.46, 0.45, 0.94), left ${duration}s linear, transform ${duration}s linear`;
-                    
-                    container.appendChild(kira);
-
-                    // Force reflow
-                    kira.getBoundingClientRect();
-
-                    kira.style.top = '110vh';
-                    kira.style.left = (startX + horizontalSpread) + 'vw';
-                    kira.style.transform = `scale(${scale}) rotate(${rotation * direction}deg)`;
-
+                  for (let i = 0; i < 20; i++) {
+                    const delay = i * 80; // stagger each dog by 80ms
                     setTimeout(() => {
-                      kira.remove();
-                      if (container.children.length === 0) {
-                        container.remove();
-                      }
-                    }, duration * 1000);
+                      const kira = document.createElement('img');
+                      kira.src = './kira-dog.png';
+                      kira.style.position = 'absolute';
+                      kira.style.bottom = '-120px';
+                      kira.style.top = 'auto';
+
+                      const startX = 5 + Math.random() * 90;
+                      kira.style.left = startX + 'vw';
+                      kira.style.width = '90px';
+
+                      const duration = 3.5 + Math.random() * 2.5; // 3.5–6s, slow enough to see
+                      const tilt = (Math.random() - 0.5) * 30; // gentle tilt max ±15deg
+                      const scale = 0.7 + Math.random() * 0.5;
+                      const horizontalDrift = (Math.random() - 0.5) * 20;
+
+                      kira.style.transform = `scale(${scale}) rotate(${tilt}deg)`;
+                      kira.style.transition = `bottom ${duration}s cubic-bezier(0.2, 0.8, 0.4, 1), left ${duration}s ease-in-out`;
+
+                      container.appendChild(kira);
+                      kira.getBoundingClientRect(); // force reflow
+
+                      kira.style.bottom = '110vh';
+                      kira.style.left = (startX + horizontalDrift) + 'vw';
+
+                      setTimeout(() => {
+                        kira.remove();
+                        if (container.children.length === 0) container.remove();
+                      }, duration * 1000 + 200);
+                    }, delay);
                   }
                 }}
                 className="group flex flex-col items-center space-y-2 focus:outline-none"
