@@ -34,17 +34,27 @@ export default function Home() {
       transition={{ duration: 1 }}
       className="relative min-h-screen w-full flex flex-col items-center"
     >
-      {/* Background Image - Full Screen */}
-      <div className="absolute md:fixed inset-0 -z-10 overflow-hidden">
+      {/* Mobile Hero Image - block only below md breakpoint */}
+      <div className="block md:hidden relative w-full h-[60vh] overflow-hidden">
         <img
           src="./home.jpeg"
           alt="Karen & Juanca"
-          className="w-full h-full object-cover object-top md:object-[center_20%] opacity-90"
+          className="w-full h-full object-cover object-[center_20%] opacity-90"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+
+      {/* Desktop Background Image - fixed full-screen, only md and above */}
+      <div className="hidden md:block fixed inset-0 -z-10 overflow-hidden">
+        <img
+          src="./home.jpeg"
+          alt="Karen & Juanca"
+          className="w-full h-full object-cover object-[center_20%] opacity-90"
           referrerPolicy="no-referrer"
         />
         {/* Film Grain Overlay */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-        
+
         {/* Overlay to create the central white column effect */}
         <div className="absolute inset-0 flex justify-center">
           <div className="w-full max-w-xl bg-milk h-full shadow-[0_0_100px_rgba(0,0,0,0.1)]" />
@@ -52,7 +62,7 @@ export default function Home() {
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-10 w-full flex flex-col items-center pt-32 md:pt-48 pb-32">
+      <div className="relative z-10 w-full flex flex-col items-center pt-8 md:pt-48 pb-32">
         {/* Title Section */}
         <header className="w-full flex flex-col items-center mb-16 px-4">
           <motion.h1 
