@@ -7,6 +7,7 @@ export default function Style() {
   const pinContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (isPeruVersion) return; // No Pinterest in Spanish version
     // Pinterest replaces <a> tags with iframes, which React can't track.
     // On each mount: clear the container, re-insert a fresh <a>, then trigger Pinterest.
     const container = pinContainerRef.current;
@@ -66,7 +67,7 @@ export default function Style() {
             {isPeruVersion ? "Inspiración:" : "Style Inspo:"}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className={isPeruVersion ? "flex flex-col" : "grid grid-cols-1 md:grid-cols-2 gap-12"}>
             {/* Act I Moodboard — English only */}
             {!isPeruVersion && (
               <div className="space-y-6">
@@ -75,7 +76,7 @@ export default function Style() {
                     <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">Act I: Prelude</p>
                     <h3 className="text-2xl font-serif italic">Cocktail Chic —</h3>
                     <p className="font-sans text-sm leading-relaxed opacity-80">
-                      <span className="font-bold uppercase tracking-wider">ACT I: WELCOME PARTY.</span> Think stylish comfort for a sunset gathering. <span className="italic opacity-70">Beauty: Soft, natural makeup with undone texture or a relaxed ponytail.</span>
+                      <span className="font-bold uppercase tracking-wider">ACT I: WELCOME PARTY.</span> Think stylish comfort for a sunset gathering.
                     </p>
                   </div>
                   <div className="w-full overflow-hidden rounded-sm mt-auto">
@@ -108,7 +109,7 @@ export default function Style() {
                     }
                   </p>
                 </div>
-                <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />
+                {!isPeruVersion && <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />}
               </div>
             </div>
           </div>
