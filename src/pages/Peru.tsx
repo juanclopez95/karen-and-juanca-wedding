@@ -27,21 +27,22 @@ export default function Peru() {
       transition={{ duration: 1 }}
       className="relative min-h-screen w-full flex flex-col items-center"
     >
-      {/* Mobile Hero - full screen with KAREN & JUANCA overlay */}
-      <div className="block md:hidden relative w-full h-[100svh] overflow-hidden">
-        <img
-          src="./home.jpeg"
-          alt="Karen & Juanca"
-          className="w-full h-full object-cover object-center opacity-90"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center gap-2 px-4">
-          <h1 className="text-[clamp(1.1rem,5.5vw,2rem)] font-serif font-normal tracking-[0.08em] text-[#9a3412] text-center whitespace-nowrap">
+      {/* Mobile Hero — image with margins, title below */}
+      <div className="block md:hidden w-full">
+        <div className="w-full px-2 pt-[68px]">
+          <div className="relative w-full h-[74vh] overflow-hidden">
+            <img
+              src="./home.jpeg"
+              alt="Karen & Juanca"
+              className="w-full h-full object-cover object-center opacity-90"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col items-center pt-8 pb-2 px-4">
+          <h1 className="text-[clamp(1.6rem,8vw,2.8rem)] font-serif font-normal tracking-[0.04em] text-[#9a3412] text-center">
             KAREN &amp; JUANCA
           </h1>
-          <p className="text-[10px] tracking-[0.12em] font-serif italic opacity-70 text-center text-pitch-black">
-            Lima, Perú | 23 de Mayo 2026
-          </p>
         </div>
       </div>
 
