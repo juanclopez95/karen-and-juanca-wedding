@@ -35,11 +35,11 @@ export default function Home() {
       className="relative min-h-screen w-full flex flex-col items-center"
     >
       {/* Background Image - Full Screen */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
+      <div className="absolute md:fixed inset-0 -z-10 overflow-hidden">
         <img
           src="./home.jpeg"
           alt="Karen & Juanca"
-          className="w-full h-full object-cover object-[center_20%] opacity-90"
+          className="w-full h-full object-cover object-top md:object-[center_20%] opacity-90"
           referrerPolicy="no-referrer"
         />
         {/* Film Grain Overlay */}
