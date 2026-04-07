@@ -40,7 +40,7 @@ function Navbar() {
     ...(!isPeruVersion ? [{ name: "EXPLORE", path: "/explore" }] : []),
     { name: isPeruVersion ? "ESTILO" : "STYLE", path: "/style" },
     { name: isPeruVersion ? "PREGUNTAS" : "FAQ", path: "/faq" },
-    { name: "RSVP", path: "/rsvp" },
+    ...(!isPeruVersion ? [{ name: "RSVP", path: "/rsvp" }] : []),
   ];
 
   return (
