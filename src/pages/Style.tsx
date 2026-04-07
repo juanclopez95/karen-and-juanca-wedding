@@ -1,14 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 
 export default function Style() {
   const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
 
+  const pinContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // In an SPA, DOMContentLoaded has already fired, so `defer` scripts never
-    // auto-execute on re-navigation. Strategy:
-    //   - If the script is already loaded and PinUtils exists → call build() directly.
-    //   - Otherwise load the script fresh (async only, no defer).
+    // Pinterest replaces <a> tags with iframes, which React can't track.
+    // On each mount: clear the container, re-insert a fresh <a>, then trigger Pinterest.
+    const container = pinContainerRef.current;
+    if (!container) return;
+
+    // Wipe any leftover iframe from a previous visit
+    container.innerHTML = "";
+    const anchor = document.createElement("a");
+    anchor.setAttribute("data-pin-do", "embedBoard");
+    anchor.setAttribute("data-pin-board-width", "auto");
+    anchor.setAttribute("data-pin-scale-height", "400");
+    anchor.setAttribute("data-pin-scale-width", "80");
+    anchor.href = "https://www.pinterest.com/karentelge/fashionably-elegant/";
+    container.appendChild(anchor);
+
     // @ts-ignore
     if (window.PinUtils) {
       // @ts-ignore
@@ -95,15 +108,7 @@ export default function Style() {
                     }
                   </p>
                 </div>
-                <div className="w-full overflow-hidden rounded-sm mt-auto">
-                  <a
-                    data-pin-do="embedBoard"
-                    data-pin-board-width="auto"
-                    data-pin-scale-height="400"
-                    data-pin-scale-width="80"
-                    href="https://www.pinterest.com/karentelge/fashionably-elegant/"
-                  ></a>
-                </div>
+                <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />
               </div>
             </div>
           </div>
