@@ -5,26 +5,17 @@ export default function Style() {
   const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
 
   useEffect(() => {
+    // Remove any existing Pinterest script and clear the cached PinUtils
+    // so the fresh script re-scans the current SPA DOM on every mount.
+    const existing = document.querySelector('script[src*="pinit.js"]');
+    if (existing) existing.remove();
     // @ts-ignore
-    if (window.PinUtils) {
-      // Script already loaded — just rebuild to pick up new DOM nodes
-      // @ts-ignore
-      setTimeout(() => window.PinUtils.build(), 100);
-      return;
-    }
-    // Load Pinterest script once; intentionally not removed on unmount
-    // so navigating back to this page can call PinUtils.build() above
+    delete window.PinUtils;
+
     const script = document.createElement("script");
     script.src = "//assets.pinterest.com/js/pinit.js";
     script.async = true;
     script.defer = true;
-    script.onload = () => {
-      // @ts-ignore
-      if (window.PinUtils) {
-        // @ts-ignore
-        window.PinUtils.build();
-      }
-    };
     document.body.appendChild(script);
   }, []);
 
