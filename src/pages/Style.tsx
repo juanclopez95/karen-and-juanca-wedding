@@ -5,17 +5,23 @@ export default function Style() {
   const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
 
   useEffect(() => {
-    // Remove any existing Pinterest script and clear the cached PinUtils
-    // so the fresh script re-scans the current SPA DOM on every mount.
+    // In an SPA, DOMContentLoaded has already fired, so `defer` scripts never
+    // auto-execute on re-navigation. Strategy:
+    //   - If the script is already loaded and PinUtils exists → call build() directly.
+    //   - Otherwise load the script fresh (async only, no defer).
+    // @ts-ignore
+    if (window.PinUtils) {
+      // @ts-ignore
+      window.PinUtils.build();
+      return;
+    }
+
     const existing = document.querySelector('script[src*="pinit.js"]');
     if (existing) existing.remove();
-    // @ts-ignore
-    delete window.PinUtils;
 
     const script = document.createElement("script");
     script.src = "//assets.pinterest.com/js/pinit.js";
     script.async = true;
-    script.defer = true;
     document.body.appendChild(script);
   }, []);
 
