@@ -7,7 +7,6 @@ export default function Style() {
   const pinContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isPeruVersion) return; // No Pinterest in Spanish version
     // Pinterest replaces <a> tags with iframes, which React can't track.
     // On each mount: clear the container, re-insert a fresh <a>, then trigger Pinterest.
     const container = pinContainerRef.current;
@@ -67,9 +66,12 @@ export default function Style() {
             {isPeruVersion ? "Inspiración:" : "Style Inspo:"}
           </p>
 
-          <div className={isPeruVersion ? "flex flex-col" : "grid grid-cols-1 md:grid-cols-2 gap-12"}>
-            {/* Act I Moodboard — English only */}
-            {!isPeruVersion && (
+          {isPeruVersion ? (
+            // Peru: just the Pinterest board, no card text
+            <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm" />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Act I Moodboard — English only */}
               <div className="space-y-6">
                 <div className="p-8 border border-pitch-black/10 flex flex-col h-full">
                   <div className="mb-8 space-y-4">
@@ -90,29 +92,22 @@ export default function Style() {
                   </div>
                 </div>
               </div>
-            )}
 
-            {/* Act II & III Moodboard */}
-            <div className="space-y-6">
-              <div className="p-8 border border-pitch-black/10 flex flex-col h-full">
-                <div className="mb-8 space-y-4">
-                  <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">
-                    {isPeruVersion ? "Actos I & II: Portal" : "Act II & III: Portal"}
-                  </p>
-                  <h3 className="text-2xl font-serif italic">
-                    {isPeruVersion ? "Elegancia —" : "Fashionably Elegant —"}
-                  </h3>
-                  <p className="font-sans text-sm leading-relaxed opacity-80">
-                    {isPeruVersion
-                      ? <><span className="font-bold uppercase tracking-wider">ACTOS I & II: CEREMONIA Y CELEBRACIÓN.</span> Vestido largo, traje y corbata — con tu propio estilo.</>
-                      : <><span className="font-bold uppercase tracking-wider">ACTS II & III: WEDDING CEREMONY & RECEPTION.</span> Long dress, Suit &amp; Tie, but make it fun instead.</>
-                    }
-                  </p>
+              {/* Act II & III Moodboard */}
+              <div className="space-y-6">
+                <div className="p-8 border border-pitch-black/10 flex flex-col h-full">
+                  <div className="mb-8 space-y-4">
+                    <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">Act II & III: Portal</p>
+                    <h3 className="text-2xl font-serif italic">Fashionably Elegant —</h3>
+                    <p className="font-sans text-sm leading-relaxed opacity-80">
+                      <span className="font-bold uppercase tracking-wider">ACTS II & III: WEDDING CEREMONY & RECEPTION.</span> Long dress, Suit &amp; Tie, but make it fun instead.
+                    </p>
+                  </div>
+                  <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />
                 </div>
-                {!isPeruVersion && <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />}
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
 
