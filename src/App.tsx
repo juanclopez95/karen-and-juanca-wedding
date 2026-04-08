@@ -57,13 +57,14 @@ function Navbar() {
           : "bg-transparent border-transparent py-8"
       )}
     >
-      <div className="editorial-margin flex justify-center items-center gap-8 md:gap-16">
+      <div className={cn("editorial-margin flex justify-center items-center md:gap-16", isColombiaVersion ? "gap-3" : "gap-8")}>
         {navItems.map((item) => (
           <Link
             key={item.name}
             to={item.path}
             className={cn(
-              "text-[10px] md:text-xs tracking-metadata font-sans transition-all hover:opacity-60",
+              "md:text-xs tracking-metadata font-sans transition-all hover:opacity-60",
+              isColombiaVersion ? "text-[8.5px]" : "text-[10px]",
               location.pathname === item.path ? "font-black" : "font-medium"
             )}
           >
