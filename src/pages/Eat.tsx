@@ -47,6 +47,7 @@ export default function Eat() {
         { name: "CORDIAL", price: "$$", mapsUrl: "https://www.google.com/maps/place/Cordial/@-12.14,-77.02,17z", eta: "10 min", rsvpUrl: "https://wa.me/51957801199", ig: "cordial_barranco", desc: "Intimate and friendly bar with a great selection of spirits." },
         { name: "Ayahuasca", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Ayahuasca+Restobar/@-12.14,-77.02,17z", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "A stunning converted mansion offering a unique sensory experience." },
         { name: "Carnaval", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Carnaval+Bar/@-12.09,-77.03,17z", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "World-class cocktails and an immersive bar experience." },
+        { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "https://www.instagram.com/ladybee.lima/", ig: "ladybee.lima", desc: "Charming bar with creative cocktails and a great vibe." },
       ]
     }
   ];
