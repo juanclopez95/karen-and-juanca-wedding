@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/src/lib/utils";
 import Home from "./pages/Home";
 import Peru from "./pages/Peru";
+import Colombia from "./pages/Colombia";
 import RSVP from "./pages/RSVP";
 import Eat from "./pages/Eat";
 import Explore from "./pages/Explore";
@@ -34,12 +35,17 @@ function Navbar() {
     if (isPeruEntry) sessionStorage.setItem("peruContext", "1");
   }, [isPeruEntry]);
   const isPeruVersion = isPeruEntry || sessionStorage.getItem("peruContext") === "1";
+  const isColombiaEntry = location.pathname === "/co";
+  useEffect(() => {
+    if (isColombiaEntry) sessionStorage.setItem("colombiaContext", "1");
+  }, [isColombiaEntry]);
+  const isColombiaVersion = isColombiaEntry || sessionStorage.getItem("colombiaContext") === "1";
   const navItems = [
-    { name: isPeruVersion ? "INICIO" : "HOME", path: isPeruVersion ? "/peru" : "/" },
-    ...(!isPeruVersion ? [{ name: "EAT", path: "/eat" }] : []),
-    ...(!isPeruVersion ? [{ name: "EXPLORE", path: "/explore" }] : []),
-    { name: isPeruVersion ? "ESTILO" : "STYLE", path: "/style" },
-    { name: isPeruVersion ? "PREGUNTAS" : "FAQ", path: "/faq" },
+    { name: isPeruVersion ? "INICIO" : isColombiaVersion ? "INICIO" : "HOME", path: isPeruVersion ? "/peru" : isColombiaVersion ? "/co" : "/" },
+    ...(!isPeruVersion ? [{ name: isColombiaVersion ? "COMER" : "EAT", path: "/eat" }] : []),
+    ...(!isPeruVersion ? [{ name: isColombiaVersion ? "EXPLORAR" : "EXPLORE", path: "/explore" }] : []),
+    { name: (isPeruVersion || isColombiaVersion) ? "ESTILO" : "STYLE", path: "/style" },
+    { name: (isPeruVersion || isColombiaVersion) ? "PREGUNTAS" : "FAQ", path: "/faq" },
   ];
 
   return (
@@ -84,24 +90,24 @@ function WhatsAppButton() {
   const location = useLocation();
   const isPeruEntry = location.pathname === "/peru";
   const isPeruVersion = isPeruEntry || sessionStorage.getItem("peruContext") === "1";
+  const isColombiaEntry = location.pathname === "/co";
+  const isColombiaVersion = isColombiaEntry || sessionStorage.getItem("colombiaContext") === "1";
   if (isPeruVersion) return null;
+  // TODO: create a separate WhatsApp group for Colombian guests and update this link
+  const href = "https://chat.whatsapp.com/Kf9hMpxmntpJ8mHySeqaUE?mode=gi_t";
   return (
     <a
-      href="https://chat.whatsapp.com/Kf9hMpxmntpJ8mHySeqaUE?mode=gi_t"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-[100] flex items-center gap-3 bg-pitch-black text-milk px-5 py-3 rounded-full shadow-2xl hover:scale-105 transition-transform group"
     >
       <div className="flex flex-col items-end">
-        <span className="text-[8px] font-sans font-bold tracking-widest uppercase opacity-50 leading-none mb-1">Join Group</span>
+        <span className="text-[8px] font-sans font-bold tracking-widest uppercase opacity-50 leading-none mb-1">{isColombiaVersion ? "Únete al" : "Join Group"}</span>
         <span className="text-[10px] font-sans font-bold tracking-widest uppercase whitespace-nowrap">WhatsApp</span>
       </div>
       <div className="w-10 h-10 bg-milk/10 rounded-full flex items-center justify-center group-hover:bg-milk/20 transition-colors">
-        <svg
-          viewBox="0 0 24 24"
-          className="w-5 h-5 fill-milk"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 24 24" className="w-5 h-5 fill-milk" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-4.821 4.754a8.117 8.117 0 0 1-4.126-1.127l-.297-.175-3.07.805.82-2.992-.192-.306a8.104 8.104 0 0 1-1.244-4.302c0-4.473 3.64-8.112 8.113-8.112 2.166 0 4.203.843 5.735 2.375 1.532 1.532 2.375 3.57 2.375 5.737 0 4.474-3.64 8.113-8.113 8.113m0-17.505C7.635 1.631 3.571 5.695 3.571 10.697c0 1.6.418 3.161 1.212 4.537l-1.288 4.705 4.814-1.262c1.328.725 2.823 1.107 4.355 1.108h.004c5.06 0 9.126-4.063 9.126-9.067 0-2.424-.944-4.703-2.658-6.418-1.715-1.715-3.993-2.659-6.415-2.659" />
         </svg>
       </div>
@@ -119,6 +125,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/peru" element={<Peru />} />
+              <Route path="/co" element={<Colombia />} />
               <Route path="/eat" element={<Eat />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/style" element={<Style />} />

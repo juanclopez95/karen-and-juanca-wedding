@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 
 export default function Explore() {
+  const isColombiaVersion = typeof window !== "undefined" && sessionStorage.getItem("colombiaContext") === "1";
   const sections = [
     {
       title: "COASTAL LIMA",
@@ -38,6 +39,44 @@ export default function Explore() {
     }
   ];
 
+
+  const sectionsEs = [
+    {
+      title: "LIMA COSTERA",
+      items: [
+        { name: "Larcomar", desc: "Tiendas y restaurantes al borde del acantilado con vistas al Pacífico.", eta: "2 min walk" },
+        { name: "The Malecón", desc: "Pintoresco camino costero a lo largo de Miraflores.", eta: "1 min walk" },
+        { name: "Huaca Pucllana", desc: "Pirámide pre-inca en el corazón de la ciudad.", eta: "8 min drive" },
+        { name: "La Rosa Náutica", desc: "Restaurante icónico sobre las olas del océano.", eta: "5 min drive" },
+        { name: "Costa Verde", desc: "La dramática carretera y franja de playa bajo los acantilados.", eta: "5 min drive" },
+        { name: "Parque del Amor", desc: "Dedicado a los amantes, con mosaicos inspirados en Gaudí.", eta: "10 min walk" },
+      ]
+    },
+    {
+      title: "ARTE & CULTURA",
+      items: [
+        { name: "Barranco Walk", desc: "Barrio bohemio lleno de arte urbano e historia.", eta: "10 min drive" },
+        { name: "Puente de los Suspiros", desc: 'El famoso "Puente de los Suspiros" en Barranco.', eta: "12 min drive" },
+        { name: "MATE Museum", desc: "Dedicado a la fotografía de Mario Testino.", eta: "15 min drive" },
+        { name: "Museo Larco", desc: "Arte precolombino en una mansión del siglo XVIII.", eta: "25 min drive" },
+        { name: "MAC Lima", desc: "Museo de Arte Contemporáneo con hermosos jardines.", eta: "12 min drive" },
+        { name: "Dedalo", desc: "Galería y tienda curada de artesanías peruanas.", eta: "12 min drive" },
+        { name: "Ayahuasca Restobar", desc: "Una impresionante mansión convertida para cocteles nocturnos.", eta: "12 min drive" },
+      ]
+    },
+    {
+      title: "HISTORIA",
+      items: [
+        { name: "Plaza de Armas", desc: "La majestuosa plaza mayor de Lima.", eta: "35 min drive" },
+        { name: "Cathedral of Lima", desc: "Un hito de la arquitectura colonial.", eta: "35 min drive" },
+        { name: "Convento de San Francisco", desc: "Famoso por su biblioteca y catacumbas.", eta: "35 min drive" },
+        { name: "Palacio de Gobierno", desc: "Presencia el cambio de guardia.", eta: "35 min drive" },
+        { name: "Magic Water Circuit", desc: "Un parque de fuentes con récord Guinness.", eta: "20 min drive" },
+        { name: "Casa de Aliaga", desc: "La casa más antigua de América, en manos de la misma familia desde 1535.", eta: "35 min drive" },
+      ]
+    }
+  ];
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -47,16 +86,16 @@ export default function Explore() {
       {/* Header */}
       <div className="w-full max-w-4xl px-8 mb-24 space-y-4">
         <h1 className="text-6xl md:text-8xl font-serif tracking-tighter uppercase leading-none">
-          BEYOND THE GARÚA
+          {isColombiaVersion ? "MÁS ALLÁ DE LA GARÚA" : "BEYOND THE GARÚA"}
         </h1>
         <p className="text-xl md:text-2xl font-serif italic opacity-60">
-          A guide to the city of kings & hidden spirits
+          {isColombiaVersion ? "Una guía a la ciudad de los reyes y espíritus ocultos" : "A guide to the city of kings & hidden spirits"}
         </p>
       </div>
 
       {/* Sections */}
       <div className="w-full max-w-4xl px-8 space-y-32">
-        {sections.map((section, idx) => (
+        {(isColombiaVersion ? sectionsEs : sections).map((section, idx) => (
           <motion.div 
             key={idx}
             initial={{ y: 20, opacity: 0 }}
@@ -77,7 +116,7 @@ export default function Explore() {
                     <span className="font-serif italic text-lg">{item.name}</span> — {item.desc}
                   </p>
                   <p className="text-[10px] md:text-xs tracking-metadata font-serif italic opacity-40 uppercase">
-                    ETA: {item.eta} from Intercontinental Hotel (Barranco)
+                    {isColombiaVersion ? `ETA: ${item.eta} desde el Hotel Intercontinental (Barranco)` : `ETA: ${item.eta} from Intercontinental Hotel (Barranco)`}
                   </p>
                 </div>
               ))}

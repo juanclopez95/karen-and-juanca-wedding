@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 
 export default function FAQ() {
   const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
+  const isColombiaVersion = typeof window !== "undefined" && sessionStorage.getItem("colombiaContext") === "1";
 
   const faqsEn = [
     {
@@ -274,7 +275,170 @@ export default function FAQ() {
     },
   ];
 
-  const faqs = isPeruVersion ? faqsEs : faqsEn;
+
+  const faqsCo = [
+    {
+      q: "¿Cómo me muevo?",
+      a: (
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <p className="font-serif italic text-sm tracking-metadata opacity-60">Shuttles</p>
+            <p>Habrá shuttles de la iglesia a la celebración y de regreso. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Por favor confirma tu asistencia</a> para asegurar tu lugar. Los shuttles regresan a Lima a las 11:00 PM y 2:00 AM, con parada en el <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Barranco)</a>.</p>
+            <p className="text-sm opacity-70 italic">Si te pierdes el shuttle, el local es accesible por Uber, taxi o chofer privado.</p>
+          </div>
+
+          <div className="space-y-2">
+            <p className="font-serif italic text-sm tracking-metadata opacity-60">Servicios privados de confianza</p>
+            <ul className="space-y-1 italic">
+              <li>
+                <a href="https://wa.me/+51992784251" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-60">
+                  A&amp;C Remisse — Escríbele a Carlos por WhatsApp.
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/+51991479547" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-60">
+                  Transporte Security — Escríbele a Mario por WhatsApp.
+                </a>
+              </li>
+            </ul>
+            <p className="text-sm opacity-70">Atienden grupos y traslados desde el aeropuerto o hacia el local.</p>
+          </div>
+
+          <div className="space-y-2">
+            <p className="font-serif italic text-sm tracking-metadata opacity-60">Los locales</p>
+            <p>La ceremonia es en la <a href="https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9" target="_blank" rel="noopener noreferrer" className="italic underline">Parroquia Nuestra Señora de Fátima</a>.</p>
+            <p>La celebración es a 40 minutos en la <a href="https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="italic underline">Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona</a>. Ten en cuenta el tráfico de Lima.</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      q: "Vuelos",
+      a: (
+        <div className="space-y-6">
+          <p>Recomendamos llegar el <span className="font-bold">jueves 21 de mayo</span> para disfrutar todo lo que hemos planeado.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-2">
+              <p className="font-serif italic text-sm tracking-metadata opacity-60">Desde Bogotá</p>
+              <ul className="space-y-1 italic">
+                <li>AV 51 — 4:15 PM</li>
+                <li>LA 4906 — 11:55 AM</li>
+              </ul>
+            </div>
+            <div className="space-y-2">
+              <p className="font-serif italic text-sm tracking-metadata opacity-60">Desde Miami</p>
+              <ul className="space-y-1 italic">
+                <li>LA 2695 — 5:20 PM</li>
+                <li>AA 917 — 5:35 PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      q: "Hospedaje",
+      a: (
+        <div className="space-y-8">
+          <p>Para aprovechar Lima al máximo, recomendamos quedarse en <span className="font-bold">Miraflores</span>. Todos los hoteles están a pocos pasos entre sí y de la iglesia.</p>
+
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
+                <p className="font-serif text-xl italic">Intercontinental Hotel (Barranco)</p>
+                <p className="font-sans text-sm font-bold">$220/noche</p>
+              </div>
+              <p className="text-sm opacity-80 leading-relaxed">
+                Para reservar, escribe a <a href="mailto:reservas.limha@R-HR.COM" className="underline">reservas.limha@R-HR.COM</a> mencionando <span className="italic">"boda Juan Carlos López y Karen Telge"</span> en el asunto para obtener la tarifa especial.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
+                  <p className="font-serif text-xl italic">AC Hotel</p>
+                  <p className="font-sans text-sm font-bold">$170/noche</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
+                  <p className="font-serif text-xl italic">Aloft</p>
+                  <p className="font-sans text-sm font-bold">$100/noche</p>
+                </div>
+              </div>
+              <p className="text-sm opacity-80 leading-relaxed">
+                Para reservar con tarifa especial en AC Hotel o Aloft, escribe a <a href="mailto:corporativo@intursa.com.pe" className="underline">corporativo@intursa.com.pe</a> (gestionan ambos hoteles). Menciona <span className="italic">"Boda Karen y Juanca"</span> en el asunto.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-sm opacity-60 italic pt-4">
+            También puedes encontrar opciones en Airbnb o Wynwood House.
+          </p>
+        </div>
+      )
+    },
+    {
+      q: "Mientras en Perú",
+      a: (
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <p><span className="font-bold">Cuzco</span> – Alberga una de las 7 maravillas del mundo, Machu Picchu. Puedes quedarte unos días más después de la boda.</p>
+            <p><span className="font-bold">Tambopata</span> – Las maravillas exuberantes de la Amazonía.</p>
+            <p><span className="font-bold">Paracas</span> – Dunas infinitas a ~3.5 horas en carro desde Lima.</p>
+            <p><span className="font-bold">Máncora</span> – En la costa norte del Perú, donde el desierto se encuentra con el océano.</p>
+          </div>
+          <div className="pt-4 border-t border-pitch-black/10 space-y-2">
+            <p>Nuestra experta en viajes familiar, Rosario, puede ayudarte a diseñar el desvío perfecto antes o después de la boda.</p>
+            <p>Escríbele por correo (<a href="mailto:Rosario.griffiths@gmail.com" className="underline">Rosario.griffiths@gmail.com</a>) o por <a href="https://wa.me/51998116666" target="_blank" rel="noopener noreferrer" className="underline">WhatsApp</a> para más información.</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      q: "Lista de Regalos",
+      a: (
+        <div className="space-y-4">
+          <p>Tu presencia es lo que más importa.</p>
+          <p>Para quienes deseen obsequiar algo, encuentren nuestra lista aquí:</p>
+          <a
+            href="https://withjoy.com/karen-and-juanca/registry/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 border border-pitch-black text-[10px] tracking-[0.3em] font-sans font-bold hover:bg-pitch-black hover:text-milk transition-colors uppercase"
+          >
+            Lista de Karen &amp; Juanca
+          </a>
+        </div>
+      )
+    },
+    {
+      q: "¿Cómo está el clima?",
+      a: "Mayo en Lima es suave y seco — entre 18 y 24°C. Los días son agradables, pero las noches invitan a llevar una capa extra con la brisa costera."
+    },
+    {
+      q: "¿Puedo traer niños?",
+      a: "La celebración es solo para adultos. Si viajas con familia, escríbenos y podemos sugerirte opciones de niñera de confianza para esa noche."
+    },
+    {
+      q: "¿Necesito visa?",
+      a: (
+        <div className="space-y-4">
+          <p>Por favor verifica las indicaciones específicas de tu país. Los pasaportes colombianos y americanos típicamente son válidos para ingresar a Perú por turismo hasta por 90 días.</p>
+          <p className="font-bold border-l-2 border-pitch-black pl-4 py-1">
+            IMPORTANTE: Tu pasaporte debe tener vigencia de al menos seis meses después de la fecha de salida. Perú es estricto en esto y negará la entrada de lo contrario.
+          </p>
+        </div>
+      )
+    },
+    {
+      q: "¿Más preguntas?",
+      a: "Escríbenos directamente si necesitas algo. También recibirás un enlace para unirte al grupo de WhatsApp de invitados donde compartiremos detalles y actualizaciones en vivo."
+    },
+  ];
+
+  const faqs = isColombiaVersion ? faqsCo : isPeruVersion ? faqsEs : faqsEn;
 
   return (
     <motion.div
@@ -285,7 +449,7 @@ export default function FAQ() {
       <div className="text-center space-y-6">
         <h1 className="text-6xl md:text-8xl font-serif italic tracking-tight">FAQ</h1>
         <p className="text-[10px] tracking-metadata font-sans opacity-40">
-          {isPeruVersion ? "Preguntas Frecuentes" : "Frequently Asked Questions"}
+          {isColombiaVersion || isPeruVersion ? "Preguntas Frecuentes" : "Frequently Asked Questions"}
         </p>
       </div>
 

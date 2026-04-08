@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 
 export default function Style() {
   const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
+  const isColombiaVersion = typeof window !== "undefined" && sessionStorage.getItem("colombiaContext") === "1";
+  const isSpanish = isPeruVersion || isColombiaVersion;
 
   const pinContainerRef = useRef<HTMLDivElement>(null);
 
@@ -47,11 +49,11 @@ export default function Style() {
       {/* Header */}
       <div className="w-full max-w-5xl px-8 mb-16">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-tighter uppercase leading-[0.9] max-w-4xl mb-12">
-          {isPeruVersion ? "ESTILO & BELLEZA" : "STYLE & BEAUTY"}
+          {isSpanish ? "ESTILO & BELLEZA" : "STYLE & BEAUTY"}
         </h1>
         <div className="max-w-2xl">
           <p className="text-xl md:text-2xl font-serif italic leading-relaxed opacity-90">
-            {isPeruVersion
+            {isSpanish
               ? "Celebra con estilo. Este fin de semana es el lienzo perfecto. Vístete elegante, radiante, increíble."
               : <>Our devotion to style and fearless expression runs deep. <br /><br /> This weekend is the ultimate canvas. We invite you to dress elegantly, radiant, extra.</>
             }
@@ -63,13 +65,53 @@ export default function Style() {
       <div className="w-full max-w-5xl px-8 mb-24">
         <div className="border-t border-pitch-black/10 pt-12 space-y-12">
           <p className="text-xs tracking-widest font-sans uppercase opacity-60">
-            {isPeruVersion ? "Inspiración:" : "Style Inspo:"}
+            {isSpanish ? "Inspiración:" : "Style Inspo:"}
           </p>
 
           {isPeruVersion ? (
             // Peru: just the Pinterest board, no card text
             <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm" />
+          ) : isColombiaVersion ? (
+            // Colombia: two boards with Spanish labels
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Acto I Moodboard — Colombia */}
+              <div className="space-y-6">
+                <div className="p-8 border border-pitch-black/10 flex flex-col h-full">
+                  <div className="mb-8 space-y-4">
+                    <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">Acto I: Preludio</p>
+                    <h3 className="text-2xl font-serif italic">Cocktail Chic —</h3>
+                    <p className="font-sans text-sm leading-relaxed opacity-80">
+                      <span className="font-bold uppercase tracking-wider">ACTO I: BIENVENIDA.</span> Piensa en comodidad elegante para una reunión al atardecer.
+                    </p>
+                  </div>
+                  <div className="w-full overflow-hidden rounded-sm mt-auto">
+                    <a
+                      data-pin-do="embedBoard"
+                      data-pin-board-width="auto"
+                      data-pin-scale-height="400"
+                      data-pin-scale-width="80"
+                      href="https://www.pinterest.com/karentelge/juankar-chic/"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Actos II & III Moodboard — Colombia */}
+              <div className="space-y-6">
+                <div className="p-8 border border-pitch-black/10 flex flex-col h-full">
+                  <div className="mb-8 space-y-4">
+                    <p className="text-[10px] tracking-widest font-sans uppercase opacity-40">Actos II & III: Portal</p>
+                    <h3 className="text-2xl font-serif italic">Elegantemente de Moda —</h3>
+                    <p className="font-sans text-sm leading-relaxed opacity-80">
+                      <span className="font-bold uppercase tracking-wider">ACTOS II & III: CEREMONIA & RECEPCIÓN.</span> Vestido largo, Traje &amp; Corbata, pero diviértete.
+                    </p>
+                  </div>
+                  <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />
+                </div>
+              </div>
+            </div>
           ) : (
+            // English: two boards
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Act I Moodboard — English only */}
               <div className="space-y-6">
@@ -118,13 +160,13 @@ export default function Style() {
             <div className="space-y-12">
               <div className="space-y-4">
                 <h2 className="text-3xl md:text-4xl font-serif tracking-tight uppercase">
-                  {isPeruVersion ? "CABELLO & MAQUILLAJE" : "HAIR & MAKE-UP"}
+                  {isSpanish ? "CABELLO & MAQUILLAJE" : "HAIR & MAKE-UP"}
                 </h2>
               </div>
 
               <div className="space-y-8">
                 <p className="text-[10px] tracking-widest font-sans uppercase font-bold opacity-40">
-                  {isPeruVersion ? "ARTISTAS DE MAQUILLAJE:" : "MAKEUP ARTISTS:"}
+                  {isSpanish ? "ARTISTAS DE MAQUILLAJE:" : "MAKEUP ARTISTS:"}
                 </p>
 
                 {[
@@ -167,10 +209,10 @@ export default function Style() {
 
                 <div className="p-6 bg-surface-low border border-pitch-black/5 space-y-4 mt-8">
                   <p className="text-[10px] tracking-widest font-sans uppercase font-bold">
-                    {isPeruVersion ? "Reserva anticipada:" : "Booking Note:"}
+                    {isSpanish ? "Reserva anticipada:" : "Booking Note:"}
                   </p>
                   <p className="font-sans text-xs leading-relaxed opacity-70">
-                    {isPeruVersion
+                    {isSpanish
                       ? "Recomendamos reservar con semanas de anticipación — mayo es temporada alta en Lima."
                       : "We recommend booking at least a few weeks in advance as May is a busy wedding season in Lima."
                     }

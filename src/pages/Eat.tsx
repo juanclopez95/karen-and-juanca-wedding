@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 
 export default function Eat() {
+  const isColombiaVersion = typeof window !== "undefined" && sessionStorage.getItem("colombiaContext") === "1";
   const categories = [
     {
       title: "Classic Peruvian & Seafood",
@@ -52,6 +53,58 @@ export default function Eat() {
     }
   ];
 
+
+  const categoriesEs = [
+    {
+      title: "Clásico Peruano & Mariscos",
+      items: [
+        { name: "El Mercado", price: "$$$", mapsUrl: "https://www.google.com/maps/place/El+Mercado/@-12.108422,-77.041544,17z", eta: "8 min", rsvpUrl: "http://www.elmercado.pe/", ig: "elmercadoperu", desc: "Mariscos frescos y vibrantes en un ambiente relajado." },
+        { name: "La Mar", price: "$$$", mapsUrl: "https://www.google.com/maps/place/La+Mar+Cebicheria/@-12.110756,-77.042322,17z", eta: "10 min", rsvpUrl: "#", ig: "lamarcebicherialima", desc: "La experiencia cebichería por excelencia (sin reserva)." },
+        { name: "Central", price: "$$$$", mapsUrl: "https://www.google.com/maps/place/Central+Restaurante/@-12.154737,-77.022378,17z", eta: "12 min", rsvpUrl: "https://centralrestaurante.com.pe/reservas.html", ig: "centralrest", desc: "El buque insignia de la gastronomía peruana, reconocido mundialmente." },
+        { name: "Canta Rana", price: "$$", mapsUrl: "https://www.google.com/maps/place/Canta+Rana/@-12.148892,-77.022211,17z", eta: "13 min", rsvpUrl: "#", ig: "cantarana_barranco", desc: "Un clásico local para ceviche y ambiente inigualable (sin reserva)." },
+      ]
+    },
+    {
+      title: "Criollo",
+      items: [
+        { name: "Panchita", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Panchita/@-12.119444,-77.028889,17z", eta: "7 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/panchita", ig: "panchita.pe", desc: "Lo mejor de la comida callejera peruana y anticuchos." },
+        { name: "Alegria", price: "$$", mapsUrl: "https://www.google.com/maps/place/Alegr%C3%ADa+Picanter%C3%ADa/@-12.11,-77.03,17z", eta: "8 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/alegria", ig: "alegria.picanteria", desc: "Sabores tradicionales de picantería con un toque moderno." },
+        { name: "Isolina", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Isolina+Taberna+Peruana/@-12.148556,-77.022122,17z", eta: "12 min", rsvpUrl: "https://isolina.pe/reservas", ig: "isolinataberna", desc: "Taberna limeña tradicional para platos contundentes y auténticos." },
+      ]
+    },
+    {
+      title: "Nikkei",
+      items: [
+        { name: "Maido", price: "$$$$", mapsUrl: "https://www.google.com/maps/place/Maido/@-12.124722,-77.029444,17z", eta: "5 min", rsvpUrl: "https://www.maido.pe/reservas", ig: "maidonikkei", desc: "Una experiencia de fusión Nikkei increíble." },
+        { name: "Osaka", price: "$$$$", mapsUrl: "https://www.google.com/maps/search/Osaka+Nikkei+Lima", eta: "10 min", rsvpUrl: "https://osakanikkei.com/es/lima", ig: "osakanikkei", desc: "Fusión sofisticada de técnicas japonesas con sabores peruanos." },
+        { name: "Kero (Osaka Bar)", price: "$$$", mapsUrl: "https://www.google.com/maps/search/Kero+Osaka+Bar+Lima", eta: "10 min", rsvpUrl: "https://osakanikkei.com/es/lima", ig: "osakanikkei", desc: "La vibrante experiencia de bar en Osaka." },
+      ]
+    },
+    {
+      title: "Café",
+      items: [
+        { name: "Amarena", price: "$$", mapsUrl: "https://www.google.com/maps/place/Amarena+Caf%C3%A9+Urbano/@-12.12,-77.03,17z", eta: "6 min", rsvpUrl: "https://www.instagram.com/amarenacafe/", ig: "amarenacafe", desc: "Lugar encantador para café de especialidad y pasteles." },
+        { name: "San Antonio", price: "$$", mapsUrl: "https://www.google.com/maps/search/Pasteleria+San+Antonio+Lima", eta: "8 min", rsvpUrl: "https://pasteleriasanantonio.com/", ig: "pasteleriasanantonio", desc: "Una clásica pastelería y café limeño." },
+        { name: "Pan De La Chola", price: "$$", mapsUrl: "https://www.google.com/maps/place/El+Pan+de+la+Chola/@-12.11,-77.04,17z", eta: "10 min", rsvpUrl: "https://www.elpandelachola.com/", ig: "elpandelachola", desc: "Pan artesanal y café para una mañana relajada." },
+        { name: "Entremigas", price: "$$", mapsUrl: "https://www.google.com/maps/search/Entremigas+Lima", eta: "10 min", rsvpUrl: "https://www.instagram.com/entremigas.pe/", ig: "entremigas.pe", desc: "Panadería acogedora especializada en masa madre y café de calidad." },
+        { name: "Demo", price: "$$", mapsUrl: "https://www.google.com/maps/place/Demo+Barranco/@-12.14,-77.02,17z", eta: "12 min", rsvpUrl: "https://www.instagram.com/demo_barranco/", ig: "demo_barranco", desc: "Panadería y café moderno en el corazón de Barranco." },
+      ]
+    },
+    {
+      title: "Cocteles",
+      items: [
+        { name: "Belo Bar", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Belo+Bar/@-12.13,-77.03,17z", eta: "2 min", rsvpUrl: "https://www.belmond.com/hotels/south-america/peru/lima/belmond-miraflores-park/dining", ig: "belmondmiraflorespark", desc: "Bar de hotel sofisticado con una carta de cocteles curada." },
+        { name: "Bazar", price: "$$", mapsUrl: "https://www.google.com/maps/place/Bazar+Restobar/@-12.12,-77.03,17z", eta: "5 min", rsvpUrl: "https://wa.me/51944247277", ig: "bazar_restobar", desc: "Restobar vibrante con gran ambiente y música en vivo." },
+        { name: "Santería Bar", price: "$$", mapsUrl: "https://www.google.com/maps/place/Santer%C3%ADa/@-12.12,-77.03,17z", eta: "6 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/santeria", ig: "santeria.bar", desc: "Ambiente místico y cocteles creativos en el corazón de Miraflores." },
+        { name: "Damián", price: "$$$", mapsUrl: "https://www.google.com/maps/search/Damian+Club+Barranco", eta: "10 min", rsvpUrl: "https://damian.club/", ig: "damian.club_", desc: "Club exclusivo con enfoque en música electrónica y energía nocturna." },
+        { name: "CORDIAL", price: "$$", mapsUrl: "https://www.google.com/maps/place/Cordial/@-12.14,-77.02,17z", eta: "10 min", rsvpUrl: "https://wa.me/51957801199", ig: "cordial_barranco", desc: "Bar íntimo y acogedor con gran selección de destilados." },
+        { name: "Ayahuasca", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Ayahuasca+Restobar/@-12.14,-77.02,17z", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "Una impresionante mansión convertida con una experiencia sensorial única." },
+        { name: "Carnaval", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Carnaval+Bar/@-12.09,-77.03,17z", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "Cocteles de clase mundial y una experiencia de bar inmersiva." },
+        { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "https://www.instagram.com/ladybee.lima/", ig: "ladybee.lima", desc: "Bar encantador con cocteles creativos y buen ambiente." },
+      ]
+    }
+  ];
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -62,7 +115,7 @@ export default function Eat() {
       <div className="w-full max-w-4xl px-8 mb-24 space-y-6">
         <div className="relative inline-block max-w-[18ch]">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-tighter uppercase leading-[0.9] pr-12 md:pr-24">
-            DID YOU COME FOR US OR THE CEVICHE?
+            {isColombiaVersion ? "\u00bfVINISTE POR NOSOTROS O POR EL CEVICHE?" : "DID YOU COME FOR US OR THE CEVICHE?"}
           </h1>
           <img 
             src="./kirafood.png" 
@@ -79,13 +132,13 @@ export default function Eat() {
           />
         </div>
         <p className="text-xl md:text-2xl font-serif italic opacity-80">
-          Your culinary guide to Lima
+          {isColombiaVersion ? "Tu gu\u00eda culinaria de Lima" : "Your culinary guide to Lima"}
         </p>
       </div>
 
       {/* Content */}
       <div className="w-full max-w-4xl px-8 space-y-32">
-        {categories.map((category, catIdx) => (
+        {(isColombiaVersion ? categoriesEs : categories).map((category, catIdx) => (
           <motion.div 
             key={catIdx}
             initial={{ y: 20, opacity: 0 }}
@@ -107,7 +160,7 @@ export default function Eat() {
                       {item.name} <span className="text-sm font-sans not-italic opacity-40 ml-2">{item.price}</span>
                     </h3>
                     <span className="text-[10px] md:text-xs tracking-metadata font-serif italic opacity-40 uppercase">
-                      ETA: {item.eta} from Intercontinental Hotel
+                      {isColombiaVersion ? `ETA: ${item.eta} desde el Hotel Intercontinental` : `ETA: ${item.eta} from Intercontinental Hotel`}
                     </span>
                   </div>
                   <p className="font-sans text-sm md:text-base leading-relaxed opacity-80">
@@ -121,7 +174,7 @@ export default function Eat() {
                         rel="noopener noreferrer" 
                         className="text-[10px] tracking-[0.2em] font-sans font-bold underline hover:opacity-60 transition-opacity block uppercase"
                       >
-                        (RSVP)
+                        {isColombiaVersion ? "(RESERVAR)" : "(RSVP)"}
                       </a>
                     )}
                     {item.rsvpUrl !== "#" && <span className="text-[10px] opacity-20">/</span>}
@@ -140,7 +193,7 @@ export default function Eat() {
                       rel="noopener noreferrer" 
                       className="text-[10px] tracking-[0.2em] font-sans font-bold underline hover:opacity-60 transition-opacity block uppercase"
                     >
-                      (MAPS)
+                      {isColombiaVersion ? "(MAPA)" : "(MAPS)"}
                     </a>
                   </div>
                 </div>
