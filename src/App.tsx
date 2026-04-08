@@ -57,7 +57,7 @@ function Navbar() {
           : "bg-transparent border-transparent py-8"
       )}
     >
-      <div className={cn("editorial-margin flex justify-center items-center md:gap-16", isColombiaVersion ? "gap-3" : "gap-8")}>
+      <div className={cn("flex justify-center items-center md:gap-16", isColombiaVersion ? "gap-[10px] px-2 md:px-[clamp(1.5rem,8vw,12rem)]" : "gap-8 editorial-margin")}>
         {navItems.map((item) => (
           <Link
             key={item.name}
