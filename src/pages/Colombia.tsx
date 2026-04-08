@@ -45,7 +45,7 @@ export default function Colombia() {
             />
           </div>
         </div>
-        <div className="flex flex-col items-center pt-8 pb-8 px-4 space-y-4">
+        <div className="flex flex-col items-center pt-8 pb-8 px-4 pr-[140px] md:pr-4 space-y-4">
           <h1 className="text-[clamp(1.6rem,8vw,2.8rem)] font-serif font-normal tracking-[0.04em] text-[#9a3412] text-center">
             KAREN &amp; JUANCA
           </h1>

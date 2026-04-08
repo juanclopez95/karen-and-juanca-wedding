@@ -35,7 +35,7 @@ function Navbar() {
     if (isPeruEntry) sessionStorage.setItem("peruContext", "1");
   }, [isPeruEntry]);
   const isPeruVersion = isPeruEntry || sessionStorage.getItem("peruContext") === "1";
-  const isColombiaEntry = location.pathname === "/co";
+  const isColombiaEntry = location.pathname === "/co" || location.pathname.startsWith("/co/");
   useEffect(() => {
     if (isColombiaEntry) sessionStorage.setItem("colombiaContext", "1");
   }, [isColombiaEntry]);
@@ -90,7 +90,7 @@ function WhatsAppButton() {
   const location = useLocation();
   const isPeruEntry = location.pathname === "/peru";
   const isPeruVersion = isPeruEntry || sessionStorage.getItem("peruContext") === "1";
-  const isColombiaEntry = location.pathname === "/co";
+  const isColombiaEntry = location.pathname === "/co" || location.pathname.startsWith("/co/");
   const isColombiaVersion = isColombiaEntry || sessionStorage.getItem("colombiaContext") === "1";
   if (isPeruVersion) return null;
   // TODO: create a separate WhatsApp group for Colombian guests and update this link
