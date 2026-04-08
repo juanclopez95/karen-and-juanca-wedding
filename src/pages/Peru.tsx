@@ -46,6 +46,14 @@ export default function Peru() {
           <p className="text-sm tracking-[0.05em] font-serif italic opacity-70 text-center">
             Lima, Perú | 23 de Mayo 2026
           </p>
+          <a
+            href="https://withjoy.com/karen-and-juanca/rsvp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 border border-pitch-black text-[10px] tracking-[0.3em] font-sans font-bold hover:bg-pitch-black hover:text-milk transition-colors"
+          >
+            RSVP
+          </a>
         </div>
       </div>
 
