@@ -7,25 +7,24 @@ export default function Eat() {
       title: "Classic Peruvian & Seafood",
       items: [
         { name: "El Mercado", price: "$$$", mapsUrl: "https://www.google.com/maps/place/El+Mercado/@-12.108422,-77.041544,17z", eta: "8 min", rsvpUrl: "http://www.elmercado.pe/", ig: "elmercadoperu", desc: "Fresh, vibrant seafood in a casual setting." },
-        { name: "La Mar", price: "$$$", mapsUrl: "https://www.google.com/maps/place/La+Mar+Cebicheria/@-12.110756,-77.042322,17z", eta: "10 min", rsvpUrl: "#", ig: "lamarcebicherialima", desc: "The quintessential cebichería experience (Walk-in only)." },
-        { name: "Central", price: "$$$$", mapsUrl: "https://www.google.com/maps/place/Central+Restaurante/@-12.154737,-77.022378,17z", eta: "12 min", rsvpUrl: "https://centralrestaurante.com.pe/reservas.html", ig: "centralrest", desc: "The world-renowned flagship of Peruvian gastronomy." },
-        { name: "Canta Rana", price: "$$", mapsUrl: "https://www.google.com/maps/place/Canta+Rana/@-12.148892,-77.022211,17z", eta: "13 min", rsvpUrl: "#", ig: "cantarana_barranco", desc: "A beloved local classic for ceviche and atmosphere (Walk-in only)." },
+        { name: "La Mar", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Ag2m2pXZAarCnQX66", eta: "10 min", rsvpUrl: "#", ig: "lamarcebicherialima", desc: "The quintessential cebichería experience (Walk-in only)." },
+        { name: "Central", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/8jjAKCivEU8KGtxK7", eta: "12 min", rsvpUrl: "https://centralrestaurante.com.pe/reservas.html", ig: "centralrest", desc: "The world-renowned flagship of Peruvian gastronomy." },
+        { name: "Canta Rana", price: "$$", mapsUrl: "https://maps.app.goo.gl/eom2LA13rHLxj53G6", eta: "13 min", rsvpUrl: "#", ig: "cantaranaoficial", desc: "A beloved local classic for ceviche and atmosphere (Walk-in only)." },
       ]
     },
     {
       title: "Criollo",
       items: [
-        { name: "Panchita", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Panchita/@-12.119444,-77.028889,17z", eta: "7 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/panchita", ig: "panchita.pe", desc: "The best of Peruvian street food and anticuchos." },
-        { name: "Alegria", price: "$$", mapsUrl: "https://www.google.com/maps/place/Alegr%C3%ADa+Picanter%C3%ADa/@-12.11,-77.03,17z", eta: "8 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/alegria", ig: "alegria.picanteria", desc: "Traditional picantería flavors with a modern twist." },
-        { name: "Isolina", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Isolina+Taberna+Peruana/@-12.148556,-77.022122,17z", eta: "12 min", rsvpUrl: "https://isolina.pe/reservas", ig: "isolinataberna", desc: "Traditional limeño tavern for hearty, authentic dishes." },
+        { name: "Panchita", price: "$$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "7 min", rsvpUrl: "https://panchita.pe/", ig: "panchita.pe", desc: "The best of Peruvian street food and anticuchos." },
+        { name: "Alegria", price: "$$", mapsUrl: "https://www.google.com/maps/place/Alegr%C3%ADa+Picanter%C3%ADa/@-12.11,-77.03,17z", eta: "8 min", rsvpUrl: "https://wa.link/36qi28", ig: "alegria.picanteria.piurana", desc: "Traditional picantería flavors with a modern twist." },
+        { name: "Isolina", price: "$$$", mapsUrl: "https://maps.app.goo.gl/oyQY31QBXRiRj3yt8", eta: "12 min", rsvpUrl: "https://isolina.pe/reservas", ig: "isolinataberna", desc: "Traditional limeño tavern for hearty, authentic dishes." },
       ]
     },
     {
       title: "Nikkei",
       items: [
-        { name: "Maido", price: "$$$$", mapsUrl: "https://www.google.com/maps/place/Maido/@-12.124722,-77.029444,17z", eta: "5 min", rsvpUrl: "https://www.maido.pe/reservas", ig: "maidonikkei", desc: "Incredible Nikkei fusion experience." },
-        { name: "Osaka", price: "$$$$", mapsUrl: "https://www.google.com/maps/search/Osaka+Nikkei+Lima", eta: "10 min", rsvpUrl: "https://osakanikkei.com/es/lima", ig: "osakanikkei", desc: "Sophisticated blend of Japanese techniques and Peruvian flavors." },
-        { name: "Kero (Osaka Bar)", price: "$$$", mapsUrl: "https://www.google.com/maps/search/Kero+Osaka+Bar+Lima", eta: "10 min", rsvpUrl: "https://osakanikkei.com/es/lima", ig: "osakanikkei", desc: "The vibrant bar experience at Osaka." },
+        { name: "Maido", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/nQAZE6iJB8LpHzEQA", eta: "5 min", rsvpUrl: "https://www.maido.pe/reservas", ig: "mitsuharu_maido", desc: "Incredible Nikkei fusion experience." },
+        { name: "Tomo", price: "$$$", mapsUrl: "https://maps.app.goo.gl/7fgXTMZexBouSrqZA", eta: "8 min", rsvpUrl: "https://tomococinanikkei.meitre.com/", ig: "tomococinanikkei", desc: "Nikkei cuisine with clean, precise flavors." },
       ]
     },
     {
@@ -59,25 +58,24 @@ export default function Eat() {
       title: "Clásico Peruano & Mariscos",
       items: [
         { name: "El Mercado", price: "$$$", mapsUrl: "https://www.google.com/maps/place/El+Mercado/@-12.108422,-77.041544,17z", eta: "8 min", rsvpUrl: "http://www.elmercado.pe/", ig: "elmercadoperu", desc: "Mariscos frescos y vibrantes en un ambiente relajado." },
-        { name: "La Mar", price: "$$$", mapsUrl: "https://www.google.com/maps/place/La+Mar+Cebicheria/@-12.110756,-77.042322,17z", eta: "10 min", rsvpUrl: "#", ig: "lamarcebicherialima", desc: "La experiencia cebichería por excelencia (sin reserva)." },
-        { name: "Central", price: "$$$$", mapsUrl: "https://www.google.com/maps/place/Central+Restaurante/@-12.154737,-77.022378,17z", eta: "12 min", rsvpUrl: "https://centralrestaurante.com.pe/reservas.html", ig: "centralrest", desc: "El buque insignia de la gastronomía peruana, reconocido mundialmente." },
-        { name: "Canta Rana", price: "$$", mapsUrl: "https://www.google.com/maps/place/Canta+Rana/@-12.148892,-77.022211,17z", eta: "13 min", rsvpUrl: "#", ig: "cantarana_barranco", desc: "Un clásico local para ceviche y ambiente inigualable (sin reserva)." },
+        { name: "La Mar", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Ag2m2pXZAarCnQX66", eta: "10 min", rsvpUrl: "#", ig: "lamarcebicherialima", desc: "La experiencia cebichería por excelencia (sin reserva)." },
+        { name: "Central", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/8jjAKCivEU8KGtxK7", eta: "12 min", rsvpUrl: "https://centralrestaurante.com.pe/reservas.html", ig: "centralrest", desc: "El buque insignia de la gastronomía peruana, reconocido mundialmente." },
+        { name: "Canta Rana", price: "$$", mapsUrl: "https://maps.app.goo.gl/eom2LA13rHLxj53G6", eta: "13 min", rsvpUrl: "#", ig: "cantaranaoficial", desc: "Un clásico local para ceviche y ambiente inigualable (sin reserva)." },
       ]
     },
     {
       title: "Criollo",
       items: [
-        { name: "Panchita", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Panchita/@-12.119444,-77.028889,17z", eta: "7 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/panchita", ig: "panchita.pe", desc: "Lo mejor de la comida callejera peruana y anticuchos." },
-        { name: "Alegria", price: "$$", mapsUrl: "https://www.google.com/maps/place/Alegr%C3%ADa+Picanter%C3%ADa/@-12.11,-77.03,17z", eta: "8 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/alegria", ig: "alegria.picanteria", desc: "Sabores tradicionales de picantería con un toque moderno." },
-        { name: "Isolina", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Isolina+Taberna+Peruana/@-12.148556,-77.022122,17z", eta: "12 min", rsvpUrl: "https://isolina.pe/reservas", ig: "isolinataberna", desc: "Taberna limeña tradicional para platos contundentes y auténticos." },
+        { name: "Panchita", price: "$$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "7 min", rsvpUrl: "https://panchita.pe/", ig: "panchita.pe", desc: "Lo mejor de la comida callejera peruana y anticuchos." },
+        { name: "Alegria", price: "$$", mapsUrl: "https://www.google.com/maps/place/Alegr%C3%ADa+Picanter%C3%ADa/@-12.11,-77.03,17z", eta: "8 min", rsvpUrl: "https://wa.link/36qi28", ig: "alegria.picanteria.piurana", desc: "Sabores tradicionales de picantería con un toque moderno." },
+        { name: "Isolina", price: "$$$", mapsUrl: "https://maps.app.goo.gl/oyQY31QBXRiRj3yt8", eta: "12 min", rsvpUrl: "https://isolina.pe/reservas", ig: "isolinataberna", desc: "Taberna limeña tradicional para platos contundentes y auténticos." },
       ]
     },
     {
       title: "Nikkei",
       items: [
-        { name: "Maido", price: "$$$$", mapsUrl: "https://www.google.com/maps/place/Maido/@-12.124722,-77.029444,17z", eta: "5 min", rsvpUrl: "https://www.maido.pe/reservas", ig: "maidonikkei", desc: "Una experiencia de fusión Nikkei increíble." },
-        { name: "Osaka", price: "$$$$", mapsUrl: "https://www.google.com/maps/search/Osaka+Nikkei+Lima", eta: "10 min", rsvpUrl: "https://osakanikkei.com/es/lima", ig: "osakanikkei", desc: "Fusión sofisticada de técnicas japonesas con sabores peruanos." },
-        { name: "Kero (Osaka Bar)", price: "$$$", mapsUrl: "https://www.google.com/maps/search/Kero+Osaka+Bar+Lima", eta: "10 min", rsvpUrl: "https://osakanikkei.com/es/lima", ig: "osakanikkei", desc: "La vibrante experiencia de bar en Osaka." },
+        { name: "Maido", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/nQAZE6iJB8LpHzEQA", eta: "5 min", rsvpUrl: "https://www.maido.pe/reservas", ig: "mitsuharu_maido", desc: "Una experiencia de fusión Nikkei increíble." },
+        { name: "Tomo", price: "$$$", mapsUrl: "https://maps.app.goo.gl/7fgXTMZexBouSrqZA", eta: "8 min", rsvpUrl: "https://tomococinanikkei.meitre.com/", ig: "tomococinanikkei", desc: "Cocina Nikkei con sabores limpios y precisos." },
       ]
     },
     {
