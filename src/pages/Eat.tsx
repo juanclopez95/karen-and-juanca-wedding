@@ -15,8 +15,8 @@ export default function Eat() {
     {
       title: "Criollo",
       items: [
-        { name: "Panchita", price: "$$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "7 min", rsvpUrl: "https://panchita.pe/", ig: "panchita.pe", desc: "The best of Peruvian street food and anticuchos." },
-        { name: "Alegria", price: "$$", mapsUrl: "https://www.google.com/maps/place/Alegr%C3%ADa+Picanter%C3%ADa/@-12.11,-77.03,17z", eta: "8 min", rsvpUrl: "https://wa.link/36qi28", ig: "alegria.picanteria.piurana", desc: "Traditional picantería flavors with a modern twist." },
+        { name: "Panchita", price: "$$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "7 min", rsvpUrl: "https://panchita.pe/", ig: "panchitasazoncriolla", desc: "The best of Peruvian street food and anticuchos." },
+        { name: "Alegria", price: "$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "8 min", rsvpUrl: "https://wa.link/36qi28", ig: "alegria.picanteria.piurana", desc: "Traditional picantería flavors with a modern twist." },
         { name: "Isolina", price: "$$$", mapsUrl: "https://maps.app.goo.gl/oyQY31QBXRiRj3yt8", eta: "12 min", rsvpUrl: "https://isolina.pe/reservas", ig: "isolinataberna", desc: "Traditional limeño tavern for hearty, authentic dishes." },
       ]
     },
@@ -24,30 +24,28 @@ export default function Eat() {
       title: "Nikkei",
       items: [
         { name: "Maido", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/nQAZE6iJB8LpHzEQA", eta: "5 min", rsvpUrl: "https://www.maido.pe/reservas", ig: "mitsuharu_maido", desc: "Incredible Nikkei fusion experience." },
-        { name: "Tomo", price: "$$$", mapsUrl: "https://maps.app.goo.gl/7fgXTMZexBouSrqZA", eta: "8 min", rsvpUrl: "https://tomococinanikkei.meitre.com/", ig: "tomococinanikkei", desc: "Nikkei cuisine with clean, precise flavors." },
+        { name: "Tomo", price: "$$$", mapsUrl: "https://maps.app.goo.gl/JyhmDJZcNhZBeuPL9", eta: "8 min", rsvpUrl: "https://tomococinanikkei.meitre.com/?fbclid=PAAaa4ogakxsIsKxSl8VwKLt8EXzJ7pS--FEUGC2BfIad-ocfMWaeOhb273Z4", ig: "tomococinanikkei", desc: "Nikkei cuisine with clean, precise flavors." },
       ]
     },
     {
       title: "Café",
       items: [
-        { name: "Amarena", price: "$$", mapsUrl: "https://www.google.com/maps/place/Amarena+Caf%C3%A9+Urbano/@-12.12,-77.03,17z", eta: "6 min", rsvpUrl: "https://www.instagram.com/amarenacafe/", ig: "amarenacafe", desc: "Charming spot for specialty coffee and pastries." },
-        { name: "San Antonio", price: "$$", mapsUrl: "https://www.google.com/maps/search/Pasteleria+San+Antonio+Lima", eta: "8 min", rsvpUrl: "https://pasteleriasanantonio.com/", ig: "pasteleriasanantonio", desc: "A classic limeño pastry shop and cafe." },
-        { name: "Pan De La Chola", price: "$$", mapsUrl: "https://www.google.com/maps/place/El+Pan+de+la+Chola/@-12.11,-77.04,17z", eta: "10 min", rsvpUrl: "https://www.elpandelachola.com/", ig: "elpandelachola", desc: "Artisanal bread and coffee for a casual morning." },
-        { name: "Entremigas", price: "$$", mapsUrl: "https://www.google.com/maps/search/Entremigas+Lima", eta: "10 min", rsvpUrl: "https://www.instagram.com/entremigas.pe/", ig: "entremigas.pe", desc: "Cozy bakery focused on sourdough and quality coffee." },
-        { name: "Demo", price: "$$", mapsUrl: "https://www.google.com/maps/place/Demo+Barranco/@-12.14,-77.02,17z", eta: "12 min", rsvpUrl: "https://www.instagram.com/demo_barranco/", ig: "demo_barranco", desc: "Modern bakery and cafe in the heart of Barranco." },
+        { name: "Amarena", price: "$$", mapsUrl: "https://maps.app.goo.gl/82vnovWQGpevX4E99", eta: "6 min", rsvpUrl: "#", ig: "amarena.___", desc: "Charming spot for specialty coffee and pastries." },
+        { name: "San Antonio", price: "$$", mapsUrl: "https://maps.app.goo.gl/9PwejVQHhwrsC5iY9", eta: "8 min", rsvpUrl: "https://pasteleriasanantonio.com/", ig: "pasteleria_sanantonio", desc: "A classic limeño pastry shop and cafe." },
+        { name: "Pan De La Chola", price: "$$", mapsUrl: "https://maps.app.goo.gl/GrWhPorpVQ12aiaC9", eta: "10 min", rsvpUrl: "https://www.elpandelachola.com/", ig: "elpandelachola", desc: "Artisanal bread and coffee for a casual morning." },
+        { name: "Entremigas", price: "$$", mapsUrl: "https://www.google.com/maps/search/Entremigas+Lima", eta: "10 min", rsvpUrl: "#", ig: "entremigas.lima", desc: "Cozy bakery focused on sourdough and quality coffee." },
+        { name: "Demo", price: "$$", mapsUrl: "https://maps.app.goo.gl/jBwxzxmzk6htJ6XD7", eta: "12 min", rsvpUrl: "#", ig: "demo.lima", desc: "Modern bakery and cafe in the heart of Barranco." },
       ]
     },
     {
       title: "Cocktails",
       items: [
-        { name: "Belo Bar", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Belo+Bar/@-12.13,-77.03,17z", eta: "2 min", rsvpUrl: "https://www.belmond.com/hotels/south-america/peru/lima/belmond-miraflores-park/dining", ig: "belmondmiraflorespark", desc: "Sophisticated hotel bar with a curated cocktail list." },
-        { name: "Bazar", price: "$$", mapsUrl: "https://www.google.com/maps/place/Bazar+Restobar/@-12.12,-77.03,17z", eta: "5 min", rsvpUrl: "https://wa.me/51944247277", ig: "bazar_restobar", desc: "Vibrant restobar with a great atmosphere and live music." },
-        { name: "Santería Bar", price: "$$", mapsUrl: "https://www.google.com/maps/place/Santer%C3%ADa/@-12.12,-77.03,17z", eta: "6 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/santeria", ig: "santeria.bar", desc: "Mystical vibes and creative cocktails in the heart of Miraflores." },
-        { name: "Damián", price: "$$$", mapsUrl: "https://www.google.com/maps/search/Damian+Club+Barranco", eta: "10 min", rsvpUrl: "https://damian.club/", ig: "damian.club_", desc: "Exclusive club with a focus on electronic music and late-night energy." },
-        { name: "CORDIAL", price: "$$", mapsUrl: "https://www.google.com/maps/place/Cordial/@-12.14,-77.02,17z", eta: "10 min", rsvpUrl: "https://wa.me/51957801199", ig: "cordial_barranco", desc: "Intimate and friendly bar with a great selection of spirits." },
-        { name: "Ayahuasca", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Ayahuasca+Restobar/@-12.14,-77.02,17z", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "A stunning converted mansion offering a unique sensory experience." },
-        { name: "Carnaval", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Carnaval+Bar/@-12.09,-77.03,17z", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "World-class cocktails and an immersive bar experience." },
-        { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "https://www.instagram.com/ladybee.lima/", ig: "ladybee.lima", desc: "Charming bar with creative cocktails and a great vibe." },
+        { name: "Santería Bar", price: "$$", mapsUrl: "https://maps.app.goo.gl/XrkRQ5fpifacvnt4A", eta: "6 min", rsvpUrl: "#", ig: "santeria.bar", desc: "Mystical vibes and creative cocktails in the heart of Miraflores." },
+        { name: "Damián", price: "$$$", mapsUrl: "https://maps.app.goo.gl/X7QjSxoAurtXq2AW8", eta: "10 min", rsvpUrl: "https://damian.club/", ig: "damian.club", desc: "Exclusive club with a focus on electronic music and late-night energy." },
+        { name: "CORDIAL", price: "$$", mapsUrl: "https://maps.app.goo.gl/T6wMX9dV9SdSc28BA", eta: "10 min", rsvpUrl: "https://wa.me/51957801199", ig: "cordial_barranco", desc: "Intimate and friendly bar with a great selection of spirits." },
+        { name: "Ayahuasca", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Dw62YwsL6NCvN3wB9", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "A stunning converted mansion offering a unique sensory experience." },
+        { name: "Carnaval", price: "$$$", mapsUrl: "https://maps.app.goo.gl/2jMTi4SosXqfKQyW6", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "World-class cocktails and an immersive bar experience." },
+        { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "#", ig: "ladybee.lima", desc: "Charming bar with creative cocktails and a great vibe." },
       ]
     }
   ];
@@ -66,8 +64,8 @@ export default function Eat() {
     {
       title: "Criollo",
       items: [
-        { name: "Panchita", price: "$$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "7 min", rsvpUrl: "https://panchita.pe/", ig: "panchita.pe", desc: "Lo mejor de la comida callejera peruana y anticuchos." },
-        { name: "Alegria", price: "$$", mapsUrl: "https://www.google.com/maps/place/Alegr%C3%ADa+Picanter%C3%ADa/@-12.11,-77.03,17z", eta: "8 min", rsvpUrl: "https://wa.link/36qi28", ig: "alegria.picanteria.piurana", desc: "Sabores tradicionales de picantería con un toque moderno." },
+        { name: "Panchita", price: "$$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "7 min", rsvpUrl: "https://panchita.pe/", ig: "panchitasazoncriolla", desc: "Lo mejor de la comida callejera peruana y anticuchos." },
+        { name: "Alegria", price: "$$", mapsUrl: "https://maps.app.goo.gl/iXnRL5fMaB96F6m38", eta: "8 min", rsvpUrl: "https://wa.link/36qi28", ig: "alegria.picanteria.piurana", desc: "Sabores tradicionales de picantería con un toque moderno." },
         { name: "Isolina", price: "$$$", mapsUrl: "https://maps.app.goo.gl/oyQY31QBXRiRj3yt8", eta: "12 min", rsvpUrl: "https://isolina.pe/reservas", ig: "isolinataberna", desc: "Taberna limeña tradicional para platos contundentes y auténticos." },
       ]
     },
@@ -75,30 +73,28 @@ export default function Eat() {
       title: "Nikkei",
       items: [
         { name: "Maido", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/nQAZE6iJB8LpHzEQA", eta: "5 min", rsvpUrl: "https://www.maido.pe/reservas", ig: "mitsuharu_maido", desc: "Una experiencia de fusión Nikkei increíble." },
-        { name: "Tomo", price: "$$$", mapsUrl: "https://maps.app.goo.gl/7fgXTMZexBouSrqZA", eta: "8 min", rsvpUrl: "https://tomococinanikkei.meitre.com/", ig: "tomococinanikkei", desc: "Cocina Nikkei con sabores limpios y precisos." },
+        { name: "Tomo", price: "$$$", mapsUrl: "https://maps.app.goo.gl/JyhmDJZcNhZBeuPL9", eta: "8 min", rsvpUrl: "https://tomococinanikkei.meitre.com/?fbclid=PAAaa4ogakxsIsKxSl8VwKLt8EXzJ7pS--FEUGC2BfIad-ocfMWaeOhb273Z4", ig: "tomococinanikkei", desc: "Cocina Nikkei con sabores limpios y precisos." },
       ]
     },
     {
       title: "Café",
       items: [
-        { name: "Amarena", price: "$$", mapsUrl: "https://www.google.com/maps/place/Amarena+Caf%C3%A9+Urbano/@-12.12,-77.03,17z", eta: "6 min", rsvpUrl: "https://www.instagram.com/amarenacafe/", ig: "amarenacafe", desc: "Lugar encantador para café de especialidad y pasteles." },
-        { name: "San Antonio", price: "$$", mapsUrl: "https://www.google.com/maps/search/Pasteleria+San+Antonio+Lima", eta: "8 min", rsvpUrl: "https://pasteleriasanantonio.com/", ig: "pasteleriasanantonio", desc: "Una clásica pastelería y café limeño." },
-        { name: "Pan De La Chola", price: "$$", mapsUrl: "https://www.google.com/maps/place/El+Pan+de+la+Chola/@-12.11,-77.04,17z", eta: "10 min", rsvpUrl: "https://www.elpandelachola.com/", ig: "elpandelachola", desc: "Pan artesanal y café para una mañana relajada." },
-        { name: "Entremigas", price: "$$", mapsUrl: "https://www.google.com/maps/search/Entremigas+Lima", eta: "10 min", rsvpUrl: "https://www.instagram.com/entremigas.pe/", ig: "entremigas.pe", desc: "Panadería acogedora especializada en masa madre y café de calidad." },
-        { name: "Demo", price: "$$", mapsUrl: "https://www.google.com/maps/place/Demo+Barranco/@-12.14,-77.02,17z", eta: "12 min", rsvpUrl: "https://www.instagram.com/demo_barranco/", ig: "demo_barranco", desc: "Panadería y café moderno en el corazón de Barranco." },
+        { name: "Amarena", price: "$$", mapsUrl: "https://maps.app.goo.gl/82vnovWQGpevX4E99", eta: "6 min", rsvpUrl: "#", ig: "amarena.___", desc: "Lugar encantador para café de especialidad y pasteles." },
+        { name: "San Antonio", price: "$$", mapsUrl: "https://maps.app.goo.gl/9PwejVQHhwrsC5iY9", eta: "8 min", rsvpUrl: "https://pasteleriasanantonio.com/", ig: "pasteleria_sanantonio", desc: "Una clásica pastelería y café limeño." },
+        { name: "Pan De La Chola", price: "$$", mapsUrl: "https://maps.app.goo.gl/GrWhPorpVQ12aiaC9", eta: "10 min", rsvpUrl: "https://www.elpandelachola.com/", ig: "elpandelachola", desc: "Pan artesanal y café para una mañana relajada." },
+        { name: "Entremigas", price: "$$", mapsUrl: "https://www.google.com/maps/search/Entremigas+Lima", eta: "10 min", rsvpUrl: "#", ig: "entremigas.lima", desc: "Panadería acogedora especializada en masa madre y café de calidad." },
+        { name: "Demo", price: "$$", mapsUrl: "https://maps.app.goo.gl/jBwxzxmzk6htJ6XD7", eta: "12 min", rsvpUrl: "#", ig: "demo.lima", desc: "Panadería y café moderno en el corazón de Barranco." },
       ]
     },
     {
       title: "Cocteles",
       items: [
-        { name: "Belo Bar", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Belo+Bar/@-12.13,-77.03,17z", eta: "2 min", rsvpUrl: "https://www.belmond.com/hotels/south-america/peru/lima/belmond-miraflores-park/dining", ig: "belmondmiraflorespark", desc: "Bar de hotel sofisticado con una carta de cocteles curada." },
-        { name: "Bazar", price: "$$", mapsUrl: "https://www.google.com/maps/place/Bazar+Restobar/@-12.12,-77.03,17z", eta: "5 min", rsvpUrl: "https://wa.me/51944247277", ig: "bazar_restobar", desc: "Restobar vibrante con gran ambiente y música en vivo." },
-        { name: "Santería Bar", price: "$$", mapsUrl: "https://www.google.com/maps/place/Santer%C3%ADa/@-12.12,-77.03,17z", eta: "6 min", rsvpUrl: "https://mesa247.pe/lima/restaurante/santeria", ig: "santeria.bar", desc: "Ambiente místico y cocteles creativos en el corazón de Miraflores." },
-        { name: "Damián", price: "$$$", mapsUrl: "https://www.google.com/maps/search/Damian+Club+Barranco", eta: "10 min", rsvpUrl: "https://damian.club/", ig: "damian.club_", desc: "Club exclusivo con enfoque en música electrónica y energía nocturna." },
-        { name: "CORDIAL", price: "$$", mapsUrl: "https://www.google.com/maps/place/Cordial/@-12.14,-77.02,17z", eta: "10 min", rsvpUrl: "https://wa.me/51957801199", ig: "cordial_barranco", desc: "Bar íntimo y acogedor con gran selección de destilados." },
-        { name: "Ayahuasca", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Ayahuasca+Restobar/@-12.14,-77.02,17z", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "Una impresionante mansión convertida con una experiencia sensorial única." },
-        { name: "Carnaval", price: "$$$", mapsUrl: "https://www.google.com/maps/place/Carnaval+Bar/@-12.09,-77.03,17z", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "Cocteles de clase mundial y una experiencia de bar inmersiva." },
-        { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "https://www.instagram.com/ladybee.lima/", ig: "ladybee.lima", desc: "Bar encantador con cocteles creativos y buen ambiente." },
+        { name: "Santería Bar", price: "$$", mapsUrl: "https://maps.app.goo.gl/XrkRQ5fpifacvnt4A", eta: "6 min", rsvpUrl: "#", ig: "santeria.bar", desc: "Ambiente místico y cocteles creativos en el corazón de Miraflores." },
+        { name: "Damián", price: "$$$", mapsUrl: "https://maps.app.goo.gl/X7QjSxoAurtXq2AW8", eta: "10 min", rsvpUrl: "https://damian.club/", ig: "damian.club", desc: "Club exclusivo con enfoque en música electrónica y energía nocturna." },
+        { name: "CORDIAL", price: "$$", mapsUrl: "https://maps.app.goo.gl/T6wMX9dV9SdSc28BA", eta: "10 min", rsvpUrl: "https://wa.me/51957801199", ig: "cordial_barranco", desc: "Bar íntimo y acogedor con gran selección de destilados." },
+        { name: "Ayahuasca", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Dw62YwsL6NCvN3wB9", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "Una impresionante mansión convertida con una experiencia sensorial única." },
+        { name: "Carnaval", price: "$$$", mapsUrl: "https://maps.app.goo.gl/2jMTi4SosXqfKQyW6", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "Cocteles de clase mundial y una experiencia de bar inmersiva." },
+        { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "#", ig: "ladybee.lima", desc: "Bar encantador con cocteles creativos y buen ambiente." },
       ]
     }
   ];
