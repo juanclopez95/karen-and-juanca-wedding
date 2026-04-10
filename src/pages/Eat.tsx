@@ -6,7 +6,7 @@ export default function Eat() {
     {
       title: "Classic Peruvian & Seafood",
       items: [
-        { name: "El Mercado", price: "$$$", mapsUrl: "https://www.google.com/maps/place/El+Mercado/@-12.108422,-77.041544,17z", eta: "8 min", rsvpUrl: "http://www.elmercado.pe/", ig: "elmercadoperu", desc: "Fresh, vibrant seafood in a casual setting." },
+        { name: "El Mercado", price: "$$$", mapsUrl: "https://maps.app.goo.gl/oTcxFRz4yUgW7NDcA", eta: "8 min", rsvpUrl: "http://www.elmercado.pe/", ig: "elmercadorestaurante", desc: "Fresh, vibrant seafood in a casual setting." },
         { name: "La Mar", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Ag2m2pXZAarCnQX66", eta: "10 min", rsvpUrl: "#", ig: "lamarcebicherialima", desc: "The quintessential cebichería experience (Walk-in only)." },
         { name: "Central", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/8jjAKCivEU8KGtxK7", eta: "12 min", rsvpUrl: "https://centralrestaurante.com.pe/reservas.html", ig: "centralrest", desc: "The world-renowned flagship of Peruvian gastronomy." },
         { name: "Canta Rana", price: "$$", mapsUrl: "https://maps.app.goo.gl/eom2LA13rHLxj53G6", eta: "13 min", rsvpUrl: "#", ig: "cantaranaoficial", desc: "A beloved local classic for ceviche and atmosphere (Walk-in only)." },
@@ -57,7 +57,7 @@ export default function Eat() {
     {
       title: "Clásico Peruano & Mariscos",
       items: [
-        { name: "El Mercado", price: "$$$", mapsUrl: "https://www.google.com/maps/place/El+Mercado/@-12.108422,-77.041544,17z", eta: "8 min", rsvpUrl: "http://www.elmercado.pe/", ig: "elmercadoperu", desc: "Mariscos frescos y vibrantes en un ambiente relajado." },
+        { name: "El Mercado", price: "$$$", mapsUrl: "https://maps.app.goo.gl/oTcxFRz4yUgW7NDcA", eta: "8 min", rsvpUrl: "http://www.elmercado.pe/", ig: "elmercadorestaurante", desc: "Mariscos frescos y vibrantes en un ambiente relajado." },
         { name: "La Mar", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Ag2m2pXZAarCnQX66", eta: "10 min", rsvpUrl: "#", ig: "lamarcebicherialima", desc: "La experiencia cebichería por excelencia (sin reserva)." },
         { name: "Central", price: "$$$$", mapsUrl: "https://maps.app.goo.gl/8jjAKCivEU8KGtxK7", eta: "12 min", rsvpUrl: "https://centralrestaurante.com.pe/reservas.html", ig: "centralrest", desc: "El buque insignia de la gastronomía peruana, reconocido mundialmente." },
         { name: "Canta Rana", price: "$$", mapsUrl: "https://maps.app.goo.gl/eom2LA13rHLxj53G6", eta: "13 min", rsvpUrl: "#", ig: "cantaranaoficial", desc: "Un clásico local para ceviche y ambiente inigualable (sin reserva)." },
