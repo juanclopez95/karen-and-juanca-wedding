@@ -1,6 +1,20 @@
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 
+function PinLink({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex md:hidden items-center justify-between w-full border border-pitch-black/20 px-6 py-4 mt-4 hover:bg-pitch-black hover:text-milk transition-colors group"
+    >
+      <span className="text-[10px] tracking-widest font-sans uppercase font-bold">{label}</span>
+      <span className="text-[10px] font-sans opacity-50 group-hover:opacity-100">↗</span>
+    </a>
+  );
+}
+
 export default function Style() {
   const isPeruVersion = typeof window !== "undefined" && sessionStorage.getItem("peruContext") === "1";
   const isColombiaVersion = typeof window !== "undefined" && sessionStorage.getItem("colombiaContext") === "1";
@@ -70,7 +84,10 @@ export default function Style() {
 
           {isPeruVersion ? (
             // Peru: just the Pinterest board, no card text
-            <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm" />
+            <>
+              <div ref={pinContainerRef} className="hidden md:block w-full overflow-hidden rounded-sm" />
+              <PinLink href="https://www.pinterest.com/karentelge/fashionably-elegant/" label="Ver tablero en Pinterest" />
+            </>
           ) : isColombiaVersion ? (
             // Colombia: two boards with Spanish labels
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -84,7 +101,7 @@ export default function Style() {
                       <span className="font-bold uppercase tracking-wider">ACTO I: BIENVENIDA.</span> Piensa en comodidad elegante para una reunión al atardecer.
                     </p>
                   </div>
-                  <div className="w-full overflow-hidden rounded-sm mt-auto">
+                  <div className="hidden md:block w-full overflow-hidden rounded-sm mt-auto">
                     <a
                       data-pin-do="embedBoard"
                       data-pin-board-width="auto"
@@ -93,6 +110,7 @@ export default function Style() {
                       href="https://www.pinterest.com/karentelge/juankar-chic/"
                     ></a>
                   </div>
+                  <PinLink href="https://www.pinterest.com/karentelge/juankar-chic/" label="Ver tablero en Pinterest" />
                 </div>
               </div>
 
@@ -106,7 +124,8 @@ export default function Style() {
                       <span className="font-bold uppercase tracking-wider">ACTOS II & III: CEREMONIA & RECEPCIÓN.</span> Vestido largo, Traje &amp; Corbata, pero diviértete.
                     </p>
                   </div>
-                  <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />
+                  <div ref={pinContainerRef} className="hidden md:block w-full overflow-hidden rounded-sm mt-auto" />
+                  <PinLink href="https://www.pinterest.com/karentelge/fashionably-elegant/" label="Ver tablero en Pinterest" />
                 </div>
               </div>
             </div>
@@ -123,7 +142,7 @@ export default function Style() {
                       <span className="font-bold uppercase tracking-wider">ACT I: WELCOME PARTY.</span> Think stylish comfort for a sunset gathering.
                     </p>
                   </div>
-                  <div className="w-full overflow-hidden rounded-sm mt-auto">
+                  <div className="hidden md:block w-full overflow-hidden rounded-sm mt-auto">
                     <a
                       data-pin-do="embedBoard"
                       data-pin-board-width="auto"
@@ -132,6 +151,7 @@ export default function Style() {
                       href="https://www.pinterest.com/karentelge/juankar-chic/"
                     ></a>
                   </div>
+                  <PinLink href="https://www.pinterest.com/karentelge/juankar-chic/" label="View Board on Pinterest" />
                 </div>
               </div>
 
@@ -145,7 +165,8 @@ export default function Style() {
                       <span className="font-bold uppercase tracking-wider">ACTS II & III: WEDDING CEREMONY & RECEPTION.</span> Long dress, Suit &amp; Tie, but make it fun instead.
                     </p>
                   </div>
-                  <div ref={pinContainerRef} className="w-full overflow-hidden rounded-sm mt-auto" />
+                  <div ref={pinContainerRef} className="hidden md:block w-full overflow-hidden rounded-sm mt-auto" />
+                  <PinLink href="https://www.pinterest.com/karentelge/fashionably-elegant/" label="View Board on Pinterest" />
                 </div>
               </div>
             </div>
