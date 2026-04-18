@@ -5,7 +5,7 @@ export default function Peru() {
   const acts = [
     {
       id: "Acto Uno: Unión",
-      details: "Sábado, 23 de mayo | 3:30 PM",
+      details: "Sábado, 23 de mayo | 3:00 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
       description: "El sí, ante Dios."

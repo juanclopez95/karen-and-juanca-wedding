@@ -12,7 +12,7 @@ export default function Home() {
     },
     {
       id: "Act II: Union",
-      details: "Saturday, May 23 | 3:30 PM",
+      details: "Saturday, May 23 | 3:00 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
       description: "We reconvene for a sacred promise."
