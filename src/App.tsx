@@ -140,7 +140,7 @@ export default function App() {
         </footer>
 
         {/* Global WhatsApp Button — English version only */}
-        <WhatsAppButton />
+        {/* <WhatsAppButton /> — disabled until new link provided */}
       </div>
     </Router>
   );
