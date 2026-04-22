@@ -52,7 +52,7 @@ export default function App() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-[720px] mx-auto px-8 md:px-12 py-24 md:py-32"
+        className="relative z-10 max-w-[720px] mx-auto px-14 md:px-12 py-24 md:py-32"
       >
         {/* Brand Header */}
         <motion.header variants={itemVariants} className="mb-12">
@@ -129,9 +129,7 @@ export default function App() {
                           <br />
                           <span className="inline-block mt-1">Let us be your guide.</span>
                         </p>
-                        <p className="pt-2 text-[10px] font-serif italic text-black/70">
-                          music curation by Ro, Italo, Bastian, Delmar, and more.
-                        </p>
+
                       </div>
                     </div>
                   </div>
@@ -188,7 +186,7 @@ export default function App() {
             </div>
 
             {/* RESIDENCES */}
-            <div className="p-12 space-y-16">
+            <div className="p-8 md:p-12 space-y-16">
               <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Residences</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -214,7 +212,7 @@ export default function App() {
             </div>
 
             {/* FOOD & DRINKS */}
-            <div className="p-12 space-y-16">
+            <div className="p-8 md:p-12 space-y-16">
               <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Food & Drinks</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -238,7 +236,7 @@ export default function App() {
             </div>
 
             {/* STYLE */}
-            <div className="p-12 space-y-16 flex flex-col items-center text-center">
+            <div className="p-8 md:p-12 space-y-16 flex flex-col items-center text-center">
               <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Style</h2>
               <div className="flex gap-12">
                 <span className="font-sans text-[11px] font-bold uppercase tracking-[0.3em] text-black/40">Moodboard TBD</span>
