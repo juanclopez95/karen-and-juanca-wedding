@@ -176,7 +176,7 @@ export default function App() {
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Morning</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80 max-w-lg">
-                          Surf sessions on request, about 4 hours with transport. WhatsApp us if you're in.
+                          Optional surf sessions, about 4 hours with transport. WhatsApp us if you're in.
                         </p>
                       </div>
                       <div className="space-y-2">
@@ -219,7 +219,7 @@ export default function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-4">
                   <a href="https://mancoracasarosadelmar.com/index.html" target="_blank" rel="noopener noreferrer" className="block group">
-                    <h4 className="font-serif text-lg uppercase text-black group-hover:underline underline-offset-8 decoration-black/30 transition-all">Casa Rosa del Mar</h4>
+                    <h4 className="font-serif text-lg uppercase text-black underline underline-offset-8 decoration-black/30 transition-all">Casa Rosa del Mar</h4>
                     <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/50 mt-4">Islanders</p>
                     <p className="font-sans text-[13px] text-black/80 mt-2">Karen, Juanca, Italo, Ro, Amanda, Nico, Cata, JuanPa, Manu, Andy</p>
                     <div className="mt-1 flex items-center gap-2">
@@ -234,7 +234,7 @@ export default function App() {
                 </div>
                 <div className="space-y-4">
                   <a href="https://mancorapuntaala.com/casa-punta-ala-2/" target="_blank" rel="noopener noreferrer" className="block group">
-                    <h4 className="font-serif text-lg uppercase text-black group-hover:underline underline-offset-8 decoration-black/30 transition-all">Punta Ala + Punta Alita</h4>
+                    <h4 className="font-serif text-lg uppercase text-black underline underline-offset-8 decoration-black/30 transition-all">Punta Ala + Punta Alita</h4>
                     <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/50 mt-4">Islanders</p>
                     <p className="font-sans text-[13px] text-black/80 mt-2 text-balance leading-relaxed">Mica, Adam, Andre, Nico, Tammy, Lara, Morgan, Jose Ignacio, Nico, Sof, Hans, Dani, Bastian, Fabi, Drew, Rafa, Meli, Delmar.</p>
                   </a>
@@ -268,12 +268,12 @@ export default function App() {
               <p className="text-[9px] font-sans text-black/40 uppercase tracking-widest text-center italic">
                 * Cost will be divided per person.
               </p>
-              <p className="text-center mt-2">
+              <p className="text-center mt-1">
                 <a
                   href="https://karenyjuanca.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-serif uppercase tracking-wider text-black/40 hover:text-black/70 transition-colors"
+                  className="text-base font-serif uppercase tracking-wider text-black/40 hover:text-black/70 transition-colors underline underline-offset-4 decoration-black/30"
                 >Wedding Website</a>
               </p>
             </div>
