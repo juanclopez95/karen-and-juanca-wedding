@@ -125,7 +125,7 @@ export default function App() {
                     </div>
                     <div className="space-y-4 max-w-lg">
                       <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                        Board LP2255 to Talara at 7 p.m. Drivers will meet us on arrival — 90 minutes to Máncora. Check in, unwind.
+                        Board LP2255 to Talara at 7 p.m. Drivers will meet us on arrival. 90 minutes to Máncora. Check in, unwind.
                       </p>
                     </div>
                   </div>
@@ -146,13 +146,13 @@ export default function App() {
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Morning</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                          Start slow — ocean, yoga, breakfast on site.
+                          Start slow. Ocean, yoga, breakfast on site.
                         </p>
                       </div>
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Noon</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                          Gather at Rosa de Mar (Main House) at noon for Eternal Mirage, where the soundwaves merge with the ocean.
+                          Gather at Rosa de Mar (Main House) at noon for Eternal Mirage. The soundwaves will merge with the ocean.
                           <br />
                           <span className="inline-block mt-1">Let us be your guide.</span>
                         </p>
@@ -176,7 +176,7 @@ export default function App() {
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Morning</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80 max-w-lg">
-                          Surf sessions on request — ~4 hrs with transport. WhatsApp us if you're in.
+                          Surf sessions on request, about 4 hours with transport. WhatsApp us if you're in.
                         </p>
                       </div>
                       <div className="space-y-2">
@@ -270,13 +270,6 @@ export default function App() {
               </p>
             </div>
 
-            {/* STYLE */}
-            <div className="p-8 md:p-12 space-y-16 flex flex-col items-center text-center">
-              <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Style</h2>
-              <div className="flex gap-12">
-                <span className="font-sans text-[11px] font-bold uppercase tracking-[0.3em] text-black/40">Moodboard TBD</span>
-              </div>
-            </div>
           </div>
         </motion.div>
 
