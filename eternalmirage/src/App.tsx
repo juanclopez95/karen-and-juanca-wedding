@@ -221,14 +221,14 @@ export default function App() {
                   <a href="https://mancoracasarosadelmar.com/index.html" target="_blank" rel="noopener noreferrer" className="block group">
                     <h4 className="font-serif text-lg uppercase text-black group-hover:underline underline-offset-8 decoration-black/30 transition-all">Casa Rosa del Mar</h4>
                     <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/50 mt-4">Islanders</p>
-                    <p className="font-sans text-[13px] text-black/80 mt-2">Karen, Juanca, Italo, Ro, Amanda, Nico, Cata, JuanPa, Manu, Andy.</p>
-                    <div className="mt-4 flex items-center gap-2">
+                    <p className="font-sans text-[13px] text-black/80 mt-2">Karen, Juanca, Italo, Ro, Amanda, Nico, Cata, JuanPa, Manu, Andy</p>
+                    <div className="mt-1 flex items-center gap-2">
                       <button
                         onClick={launchKiraParade}
-                        className="w-7 h-7 flex items-center justify-center border border-black/20 text-black/40 hover:border-black/60 hover:text-black/80 transition-all text-base leading-none font-light select-none"
+                        className="font-sans text-[13px] text-black/80 hover:text-black transition-colors select-none focus:outline-none"
                         aria-label="Launch Kira"
-                      >+</button>
-                      <img src={kiraPortrait} alt="Kira" className="h-11 w-auto object-contain opacity-80" />
+                      >&amp;</button>
+                      <img src={kiraPortrait} alt="Kira" className="h-[46px] w-auto object-contain opacity-80" />
                     </div>
                   </a>
                 </div>
