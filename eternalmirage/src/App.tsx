@@ -12,6 +12,43 @@ import bgVideo from "./shader-lab-2026-04-22T00-13-47.webm";
 export default function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    let rafId: number;
+    let lastTimestamp: number | null = null;
+
+    const reverseStep = (timestamp: number) => {
+      if (lastTimestamp === null) {
+        lastTimestamp = timestamp;
+        rafId = requestAnimationFrame(reverseStep);
+        return;
+      }
+      const elapsed = (timestamp - lastTimestamp) / 1000;
+      lastTimestamp = timestamp;
+      video.currentTime = Math.max(0, video.currentTime - elapsed);
+
+      if (video.currentTime <= 0) {
+        lastTimestamp = null;
+        video.play();
+      } else {
+        rafId = requestAnimationFrame(reverseStep);
+      }
+    };
+
+    const handleEnded = () => {
+      lastTimestamp = null;
+      rafId = requestAnimationFrame(reverseStep);
+    };
+
+    video.addEventListener("ended", handleEnded);
+    return () => {
+      video.removeEventListener("ended", handleEnded);
+      cancelAnimationFrame(rafId);
+    };
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -36,7 +73,6 @@ export default function App() {
           ref={videoRef}
           autoPlay
           muted
-          loop
           playsInline
           className="w-full h-full object-cover scale-[1.15] object-[65%_center] transition-opacity duration-700 ease-in-out"
         >
@@ -84,7 +120,7 @@ export default function App() {
             {/* ITINERARY */}
             <div className="p-8 md:p-12 space-y-16">
               <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Itinerary</h2>
-              
+
               <div className="relative pl-8 md:pl-12 ml-4 md:ml-6 border-l border-black/10 space-y-24">
                 {/* Day 1 */}
                 <div className="relative">
@@ -114,7 +150,7 @@ export default function App() {
                       <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/50">Monday, May 25th</p>
                       <h3 className="font-serif text-lg uppercase tracking-wider text-black">Eternal Mirage</h3>
                     </div>
-                    
+
                     <div className="space-y-10 pl-4 border-l border-black/5">
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Morning</p>
@@ -190,13 +226,13 @@ export default function App() {
             {/* RESIDENCES */}
             <div className="p-12 space-y-16">
               <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Residences</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-4">
                   <a href="https://mancoracasarosadelmar.com/index.html" target="_blank" rel="noopener noreferrer" className="block group">
                     <h4 className="font-serif text-lg uppercase text-black group-hover:underline underline-offset-8 decoration-black/30 transition-all">Casa Rosa del Mar</h4>
                     <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/50 mt-4">Islanders</p>
-                    <p className="font-sans text-[13px] text-black/80 mt-2">Karen, Juanca, Italo, Rodolfo, Amanda, Nico, Cata, JuanPa, Manu, Andy.</p>
+                    <p className="font-sans text-[13px] text-black/80 mt-2">Karen, Juanca, Italo, Ro, Amanda, Nico, Cata, JuanPa, Manu, Andy.</p>
                   </a>
                 </div>
                 <div className="space-y-4">
@@ -207,7 +243,7 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              
+
               <p className="text-[9px] font-sans text-black/40 uppercase tracking-widest text-center italic">
                 Properties are 10m away from each other.
               </p>
@@ -216,7 +252,7 @@ export default function App() {
             {/* FOOD & DRINKS */}
             <div className="p-12 space-y-16">
               <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Food & Drinks</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-6">
                   <h3 className="font-serif text-base uppercase tracking-wider text-black">In-house Chef</h3>
@@ -231,7 +267,7 @@ export default function App() {
                   </p>
                 </div>
               </div>
-              
+
               <p className="text-[9px] font-sans text-black/40 uppercase tracking-widest text-center italic">
                 * Cost will be divided per person.
               </p>
@@ -255,9 +291,9 @@ export default function App() {
             transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
             className="w-32 h-32 md:w-48 md:h-48"
           >
-            <img 
-              src={eternalCircle} 
-              alt="Brand Mark" 
+            <img
+              src={eternalCircle}
+              alt="Brand Mark"
               className="w-full h-full object-contain brightness-0 invert"
               referrerPolicy="no-referrer"
             />
