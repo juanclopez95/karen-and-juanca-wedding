@@ -8,6 +8,33 @@ import { Asterisk } from "lucide-react";
 import { useRef } from "react";
 import eternalCircle from "./eternalmiragecircle.png";
 import bgVideo from "./pingpong.webm";
+import kiraPortrait from "./kira_no_bg.png";
+import kiraDog from "./kira-dog.png";
+
+function launchKiraParade() {
+  const container = document.createElement('div');
+  container.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999';
+  document.body.appendChild(container);
+  for (let i = 0; i < 12; i++) {
+    setTimeout(() => {
+      const img = document.createElement('img');
+      img.src = kiraDog;
+      img.style.cssText = 'position:fixed;width:70px;image-rendering:auto';
+      const startY = 50 + Math.random() * 35;
+      const endY = 5 + Math.random() * 35;
+      const duration = 2.8 + Math.random() * 1.4;
+      img.style.left = '-90px';
+      img.style.top = startY + 'vh';
+      img.style.transform = 'scaleX(-1) rotate(-12deg)';
+      img.style.transition = `left ${duration}s cubic-bezier(0.25,0.1,0.6,1), top ${duration}s cubic-bezier(0.4,0,0.2,1)`;
+      container.appendChild(img);
+      img.getBoundingClientRect();
+      img.style.left = '110vw';
+      img.style.top = endY + 'vh';
+      setTimeout(() => { img.remove(); if (!container.children.length) container.remove(); }, duration * 1000 + 300);
+    }, i * 180);
+  }
+}
 
 export default function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -195,6 +222,14 @@ export default function App() {
                     <h4 className="font-serif text-lg uppercase text-black group-hover:underline underline-offset-8 decoration-black/30 transition-all">Casa Rosa del Mar</h4>
                     <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/50 mt-4">Islanders</p>
                     <p className="font-sans text-[13px] text-black/80 mt-2">Karen, Juanca, Italo, Ro, Amanda, Nico, Cata, JuanPa, Manu, Andy.</p>
+                    <div className="mt-4 flex items-center gap-2">
+                      <button
+                        onClick={launchKiraParade}
+                        className="w-7 h-7 flex items-center justify-center border border-black/20 text-black/40 hover:border-black/60 hover:text-black/80 transition-all text-base leading-none font-light select-none"
+                        aria-label="Launch Kira"
+                      >+</button>
+                      <img src={kiraPortrait} alt="Kira" className="h-11 w-auto object-contain opacity-80" />
+                    </div>
                   </a>
                 </div>
                 <div className="space-y-4">
