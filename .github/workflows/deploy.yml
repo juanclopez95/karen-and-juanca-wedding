@@ -27,6 +27,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Build Eternal Mirage microsite
+        working-directory: eternalmirage
+        run: npm ci && npm run build
+      - name: Merge Eternal Mirage into dist
+        run: cp -r eternalmirage/dist dist/eternalmirage
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:

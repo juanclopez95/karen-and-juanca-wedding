@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&family=Pinyon+Script&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", serif;
+  --font-brand: "Alice", serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-sand: #F9F7F2;
+  --color-ink: #000000;
+  --color-taupe: #A39684;
+  --color-bone-border: #E5E0D8;
+}
+
+@layer base {
+  body {
+    @apply bg-sand text-ink antialiased;
+  }
+}
+
+.bg-grainy {
+  position: relative;
+}
+
+.bg-grainy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Page transitions */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mirage Effect for "Coming Soon" */
+@keyframes mirage {
+  0%, 100% { filter: blur(0px); opacity: 1; transform: skewX(0deg); }
+  33% { filter: blur(2px); opacity: 0.8; transform: skewX(2deg); }
+  66% { filter: blur(1px); opacity: 0.9; transform: skewX(-1deg); }
+}
+
+.animate-mirage {
+  animation: mirage 4s ease-in-out infinite;
+}
+
+/* Custom waveform animation helper */
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.5); }
+}
+
+.animate-wave {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes chrome-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-chrome {
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    135deg, 
+    #000000 0%, 
+    #1c3d3d 15%, 
+    #ffffff 35%, 
+    #c4a484 50%,
+    #ffffff 65%,
+    #1c3d3d 85%, 
+    #000000 100%
+  );
+  animation: chrome-shift 8s ease-in-out infinite;
+}
+
