@@ -125,7 +125,7 @@ export default function App() {
                     </div>
                     <div className="space-y-4 max-w-lg">
                       <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                        We'll board LP2255 together to Talara at 7 p.m. We'll have drivers waiting for us to ride over to Máncora, it's a 90-minute ride. We'll check-in at our villas, get some rest.
+                        Board LP2255 to Talara at 7 p.m. Drivers will meet us on arrival — 90 minutes to Máncora. Check in, unwind.
                       </p>
                     </div>
                   </div>
@@ -146,13 +146,13 @@ export default function App() {
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Morning</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                          We'll get the day started with an ocean dip, yoga, and breakfast.
+                          Start slow — ocean, yoga, breakfast on site.
                         </p>
                       </div>
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Noon</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                          We'll reconvene at 12PM at Rosa de Mar (Main House) for Eternal Mirage, where the soundwaves merge with the ocean.
+                          Gather at Rosa de Mar (Main House) at noon for Eternal Mirage, where the soundwaves merge with the ocean.
                           <br />
                           <span className="inline-block mt-1">Let us be your guide.</span>
                         </p>
@@ -176,13 +176,13 @@ export default function App() {
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Morning</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80 max-w-lg">
-                          We're arranging early morning surf sessions. The full lesson takes ~4 hrs including transportation. Let us know through WhatsApp if you're interested.
+                          Surf sessions on request — ~4 hrs with transport. WhatsApp us if you're in.
                         </p>
                       </div>
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Afternoon</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80 max-w-lg text-balance">
-                          We will reconvene at the main house for some poolside vibes and head to the town for one final night together.
+                          Regroup at Rosa de Mar for poolside vibes until sunset, then head to town for one final night together.
                         </p>
                       </div>
                     </div>
@@ -204,7 +204,7 @@ export default function App() {
                         Eternally grateful that you came all this way.
                       </p>
                       <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                        Since we may have different departures, we will coordinate returns with those leaving at the same time. We will share the contact information of various taxi drivers via WhatsApp.
+                        Since departures vary, we'll coordinate taxis through WhatsApp based on your schedule. We'll share contact info for various drivers.
                       </p>
                     </div>
                   </div>
