@@ -242,7 +242,7 @@ export default function App() {
               </div>
 
               <p className="text-[9px] font-sans text-black/40 uppercase tracking-widest text-center italic">
-                Properties are 10m away from each other.
+                Properties are next to each other on the beach.
               </p>
             </div>
 
