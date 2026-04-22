@@ -5,49 +5,12 @@
 
 import { motion } from "motion/react";
 import { Asterisk } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import eternalCircle from "./eternalmiragecircle.png";
-import bgVideo from "./shader-lab-2026-04-22T00-13-47.webm";
+import bgVideo from "./pingpong.webm";
 
 export default function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    let rafId: number;
-    let lastTimestamp: number | null = null;
-
-    const reverseStep = (timestamp: number) => {
-      if (lastTimestamp === null) {
-        lastTimestamp = timestamp;
-        rafId = requestAnimationFrame(reverseStep);
-        return;
-      }
-      const elapsed = (timestamp - lastTimestamp) / 1000;
-      lastTimestamp = timestamp;
-      video.currentTime = Math.max(0, video.currentTime - elapsed);
-
-      if (video.currentTime <= 0) {
-        lastTimestamp = null;
-        video.play();
-      } else {
-        rafId = requestAnimationFrame(reverseStep);
-      }
-    };
-
-    const handleEnded = () => {
-      lastTimestamp = null;
-      rafId = requestAnimationFrame(reverseStep);
-    };
-
-    video.addEventListener("ended", handleEnded);
-    return () => {
-      video.removeEventListener("ended", handleEnded);
-      cancelAnimationFrame(rafId);
-    };
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -73,6 +36,7 @@ export default function App() {
           ref={videoRef}
           autoPlay
           muted
+          loop
           playsInline
           className="w-full h-full object-cover scale-[1.15] object-[65%_center] transition-opacity duration-700 ease-in-out"
         >
