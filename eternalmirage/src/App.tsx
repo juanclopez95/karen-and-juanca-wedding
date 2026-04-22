@@ -268,12 +268,12 @@ export default function App() {
               <p className="text-[9px] font-sans text-black/40 uppercase tracking-widest text-center italic">
                 * Cost will be divided per person.
               </p>
-              <p className="text-center mt-4">
+              <p className="text-center mt-2">
                 <a
                   href="https://karenyjuanca.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[9px] font-sans font-bold uppercase tracking-widest text-black/40 hover:text-black/70 transition-colors"
+                  className="text-base font-serif uppercase tracking-wider text-black/40 hover:text-black/70 transition-colors"
                 >Wedding Website</a>
               </p>
             </div>
