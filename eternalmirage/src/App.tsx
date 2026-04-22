@@ -214,7 +214,7 @@ export default function App() {
 
             {/* RESIDENCES */}
             <div className="p-8 md:p-12 space-y-16">
-              <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Residences</h2>
+              <h2 className="font-serif text-2xl md:text-3xl uppercase tracking-wider text-black text-center">Villas</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-4">
