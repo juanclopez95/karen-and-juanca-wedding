@@ -152,7 +152,7 @@ export default function App() {
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Afternoon</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                          Gather at Rosa de Mar (Main House) at 2 PM for the Eternal Mirage. The soundwaves will merge with the ocean.
+                          Gather at Rosa de Mar (Main House) at 2 PM for Eternal Mirage. The soundwaves will merge with the ocean.
                           <br />
                           <span className="inline-block mt-1">Let us be your guide.</span>
                         </p>
