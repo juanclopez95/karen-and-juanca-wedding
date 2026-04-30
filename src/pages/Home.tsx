@@ -156,7 +156,7 @@ export default function Home() {
                 <div className="w-full border border-pitch-black/15 p-5 space-y-3 text-left">
                   <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] opacity-50">Transport</p>
                   <p className="text-sm font-sans leading-relaxed opacity-80">
-                    Shuttles depart from the church to Mamacona right after the ceremony — a 40-minute ride to the outskirts of Lima. Shuttles return at 11:00 PM and 2:00 AM, dropping off at the Intercontinental Hotel (Barranco).
+                    Shuttles depart from the church to Mamacona right after the ceremony — a 40-minute ride to the outskirts of Lima. Shuttles return at 11:00 PM and 1:00 AM (as soon as they fill up) — final bus at 3:45 AM — dropping off at the Intercontinental Hotel (Barranco).
                   </p>
                   <a
                     href="https://withjoy.com/karen-and-juanca/rsvp"

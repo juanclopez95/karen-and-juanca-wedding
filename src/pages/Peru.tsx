@@ -146,7 +146,7 @@ export default function Peru() {
                 <div className="w-full border border-pitch-black/15 p-5 space-y-3 text-left">
                   <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] opacity-50">Transporte</p>
                   <p className="text-sm font-sans leading-relaxed opacity-80">
-                    Habrá shuttles de la iglesia a Mamacona justo después de la ceremonia — 40 minutos al sur de Lima. Regresan a Lima a las 11:00 PM y 2:00 AM, con parada en el Intercontinental Hotel (Barranco).
+                    Habrá shuttles de la iglesia a Mamacona justo después de la ceremonia — 40 minutos al sur de Lima. Regresan a Lima a las 11:00 PM y 1:00 AM (en cuanto se llenen) — último bus a las 3:45 AM — con parada en el Intercontinental Hotel (Barranco).
                   </p>
                   <a
                     href="https://withjoy.com/karen-and-juanca/rsvp"
