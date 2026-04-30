@@ -46,11 +46,6 @@ export default function Eat() {
         { name: "Ayahuasca", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Dw62YwsL6NCvN3wB9", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "A stunning converted mansion offering a unique sensory experience." },
         { name: "Carnaval", price: "$$$", mapsUrl: "https://maps.app.goo.gl/2jMTi4SosXqfKQyW6", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "World-class cocktails and an immersive bar experience." },
         { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "#", ig: "ladybee.lima", desc: "Charming bar with creative cocktails and a great vibe." },
-      ]
-    },
-    {
-      title: "Internationals",
-      items: [
         { name: "Volver Bar", price: "$$", mapsUrl: "https://www.google.com/maps/search/Volver+Bar+Barranco+Lima", eta: "12 min", rsvpUrl: "#", ig: "volver.bar", desc: "A Barranco classic — live salsa in an intimate space where you're practically sitting with the band. Thursdays bring the heat." },
       ]
     }
@@ -101,11 +96,6 @@ export default function Eat() {
         { name: "Ayahuasca", price: "$$$", mapsUrl: "https://maps.app.goo.gl/Dw62YwsL6NCvN3wB9", eta: "11 min", rsvpUrl: "https://ayahuascarestobar.com/", ig: "ayahuascarestobar", desc: "Una impresionante mansión convertida con una experiencia sensorial única." },
         { name: "Carnaval", price: "$$$", mapsUrl: "https://maps.app.goo.gl/2jMTi4SosXqfKQyW6", eta: "12 min", rsvpUrl: "https://carnavalbar.com/", ig: "carnavalbar", desc: "Cocteles de clase mundial y una experiencia de bar inmersiva." },
         { name: "Lady Bee", price: "$$", mapsUrl: "https://www.google.com/maps/search/Lady+Bee+Lima", eta: "8 min", rsvpUrl: "#", ig: "ladybee.lima", desc: "Bar encantador con cocteles creativos y buen ambiente." },
-      ]
-    },
-    {
-      title: "Internacionales",
-      items: [
         { name: "Volver Bar", price: "$$", mapsUrl: "https://www.google.com/maps/search/Volver+Bar+Barranco+Lima", eta: "12 min", rsvpUrl: "#", ig: "volver.bar", desc: "Un clásico de Barranco — salsa en vivo en un espacio íntimo donde casi estás sentado con los músicos. Los jueves son imperdibles." },
       ]
     }
