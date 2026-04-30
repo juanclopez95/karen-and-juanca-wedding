@@ -150,13 +150,23 @@ export default function App() {
                         </p>
                       </div>
                       <div className="space-y-2">
-                        <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Noon</p>
+                        <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Afternoon</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80">
-                          Gather at Rosa de Mar (Main House) at noon for Eternal Mirage. The soundwaves will merge with the ocean.
+                          Gather at Rosa de Mar (Main House) at 2 PM for the Eternal Mirage. The soundwaves will merge with the ocean.
                           <br />
                           <span className="inline-block mt-1">Let us be your guide.</span>
                         </p>
-
+                        <p className="font-sans text-[13px] leading-relaxed text-black/80 mt-2">
+                          Dress Code: White Only —{" "}
+                          <a
+                            href="https://pin.it/5dIjoeMf2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline underline-offset-2 decoration-black/40 hover:decoration-black transition-colors"
+                          >
+                            Style Board
+                          </a>
+                        </p>
                       </div>
                     </div>
                   </div>
