@@ -14,15 +14,14 @@ export default function Colombia() {
       details: "Sábado, 23 de mayo | 3:00 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
-      description: "El sí, ante Dios.",
-      shuttle: true
+      description: "El sí, ante Dios.\n\nLos shuttles parten poco después de la ceremonia para un viaje de 40 minutos a Mamacona."
     },
     {
       id: "Acto III: Celebración",
       details: "Sábado, 23 de mayo | 6:00 PM - 2:00 AM",
       location: "Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona",
       mapUrl: "https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D",
-      description: "La fiesta."
+      description: <>{'La fiesta.\n\nLos shuttles regresan a las 11:00 PM y 1:00 AM — el último bus sale a las 3:45 AM de vuelta al '}<a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-60 transition-opacity">Intercontinental Hotel Barranco</a>.</>
     }
   ];
 
@@ -148,22 +147,6 @@ export default function Colombia() {
                 {act.description}
               </p>
 
-              {act.shuttle && (
-                <div className="w-full border border-pitch-black/15 p-5 space-y-3 text-left">
-                  <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] opacity-50">Transporte</p>
-                  <p className="text-sm font-sans leading-relaxed opacity-80">
-                    Habrá shuttles de la iglesia a Mamacona justo después de la ceremonia — 40 minutos al sur de Lima. Regresan a Lima a las 11:00 PM y 1:00 AM (en cuanto se llenen) — último bus a las 3:45 AM — con parada en el Intercontinental Hotel (Barranco).
-                  </p>
-                  <a
-                    href="https://withjoy.com/karen-and-juanca/rsvp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] tracking-[0.2em] font-sans font-bold underline hover:opacity-60 transition-opacity block"
-                  >
-                    ¿No usarás el shuttle? Indícalo en tu RSVP →
-                  </a>
-                </div>
-              )}
 
               <div className="w-64 h-[1px] bg-pitch-black mt-12" />
             </motion.div>
