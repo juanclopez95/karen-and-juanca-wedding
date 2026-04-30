@@ -15,7 +15,8 @@ export default function Home() {
       details: "Saturday, May 23 | 3:00 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
-      description: "We reconvene for a sacred promise."
+      description: "We reconvene for a sacred promise.",
+      shuttle: true
     },
     {
       id: "Act III: Celebration",
@@ -150,6 +151,23 @@ export default function Home() {
               <p className="text-sm md:text-base font-serif leading-relaxed max-w-lg opacity-90 whitespace-pre-line">
                 {act.description}
               </p>
+
+              {act.shuttle && (
+                <div className="w-full border border-pitch-black/15 p-5 space-y-3 text-left">
+                  <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] opacity-50">Transport</p>
+                  <p className="text-sm font-sans leading-relaxed opacity-80">
+                    Shuttles depart from the church to Mamacona right after the ceremony — a 40-minute ride to the outskirts of Lima. Shuttles return at 11:00 PM and 2:00 AM, dropping off at the Intercontinental Hotel (Barranco).
+                  </p>
+                  <a
+                    href="https://withjoy.com/karen-and-juanca/rsvp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] tracking-[0.2em] font-sans font-bold underline hover:opacity-60 transition-opacity block"
+                  >
+                    Not taking the shuttle? Let us know when you RSVP →
+                  </a>
+                </div>
+              )}
               
               <div className="w-64 h-[1px] bg-pitch-black mt-12" />
             </motion.div>
