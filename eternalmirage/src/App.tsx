@@ -186,7 +186,7 @@ export default function App() {
                       <div className="space-y-2">
                         <p className="text-[9px] font-sans font-bold uppercase tracking-[0.3em] text-black/40">Morning</p>
                         <p className="font-sans text-[13px] leading-relaxed text-black/80 max-w-lg">
-                          Optional surf sessions, about 4 hours with transport. WhatsApp us if you're in.
+                          Optional surfing lessons (walking distance). Let us know in the WhatsApp group if you're in.
                         </p>
                       </div>
                       <div className="space-y-2">
