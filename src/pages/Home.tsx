@@ -15,6 +15,7 @@ export default function Home() {
       details: "Saturday, May 23 | 3:00 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
+      walkNote: "5 min walk from Intercontinental Hotel",
       description: "We reconvene for a sacred promise.\n\nShuttles depart shortly after the ceremony for a 40-minute ride to Mamacona."
     },
     {
@@ -144,6 +145,9 @@ export default function Home() {
                   >
                     (DIRECTIONS)
                   </a>
+                  {act.walkNote && (
+                    <p className="text-[10px] tracking-[0.15em] font-sans opacity-50 italic mt-1">{act.walkNote}</p>
+                  )}
                 </div>
               </div>
 

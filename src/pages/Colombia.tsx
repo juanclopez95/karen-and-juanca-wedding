@@ -14,6 +14,7 @@ export default function Colombia() {
       details: "Sábado, 23 de mayo | 3:00 PM",
       location: "Parroquia Nuestra Señora de Fátima",
       mapUrl: "https://maps.app.goo.gl/E75fRuxKnmKvNqZZ9",
+      walkNote: "5 min caminando desde el Intercontinental Hotel",
       description: "El sí, ante Dios.\n\nLos shuttles parten poco después de la ceremonia para un viaje de 40 minutos a Mamacona."
     },
     {
@@ -140,6 +141,9 @@ export default function Colombia() {
                   >
                     (CÓMO LLEGAR)
                   </a>
+                  {act.walkNote && (
+                    <p className="text-[10px] tracking-[0.15em] font-sans opacity-50 italic mt-1">{act.walkNote}</p>
+                  )}
                 </div>
               </div>
 
