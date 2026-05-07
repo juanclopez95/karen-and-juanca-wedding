@@ -11,7 +11,7 @@ export default function FAQ() {
         <div className="space-y-6">
           <div className="space-y-2">
             <p className="font-serif italic text-sm tracking-metadata opacity-60">Shuttles</p>
-            <p>Shuttles will be offered from the church to the celebration and back. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Please RSVP</a> so we can ensure enough space. Shuttles will return to Lima at 11:00 PM and 1:00 AM (as soon as they fill up) — final bus at 3:45 AM — dropping off directly at the <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Barranco)</a>.</p>
+            <p>Shuttles will be offered from the church to the celebration and back. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Please RSVP</a> so we can ensure enough space. Shuttles will return to Lima at 11:00 PM and 1:00 AM (as soon as they fill up) — final bus at 3:45 AM — dropping off directly at the <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Miraflores)</a>.</p>
             <p className="text-sm opacity-70 italic">In case you miss the shuttle, the venue is accessible via Uber, Taxi, or private driver. Uber is reliable in Lima and a great option for short trips.</p>
           </div>
 
@@ -74,7 +74,7 @@ export default function FAQ() {
           <div className="space-y-6">
             <div className="space-y-2">
               <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
-                <p className="font-serif text-xl italic">Intercontinental Hotel (Barranco)</p>
+                <p className="font-serif text-xl italic">Intercontinental Hotel (Miraflores)</p>
                 <p className="font-sans text-sm font-bold">$220/night</p>
               </div>
               <p className="text-sm opacity-80 leading-relaxed">
@@ -173,7 +173,7 @@ export default function FAQ() {
         <div className="space-y-6">
           <div className="space-y-2">
             <p className="font-serif italic text-sm tracking-metadata opacity-60">Shuttles</p>
-            <p>Habrá shuttles de la iglesia a la celebración y de regreso. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Por favor confirma tu asistencia</a> para asegurar tu lugar. Los shuttles regresan a Lima a las 11:00 PM y 1:00 AM (en cuanto se llenen) — último bus a las 3:45 AM — con parada en el <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Barranco)</a>.</p>
+            <p>Habrá shuttles de la iglesia a la celebración y de regreso. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Por favor confirma tu asistencia</a> para asegurar tu lugar. Los shuttles regresan a Lima a las 11:00 PM y 1:00 AM (en cuanto se llenen) — último bus a las 3:45 AM — con parada en el <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Miraflores)</a>.</p>
             <p className="text-sm opacity-70 italic">Si te pierdes el shuttle, el local es accesible por Uber, taxi o chofer privado.</p>
           </div>
 
@@ -211,7 +211,7 @@ export default function FAQ() {
           <div className="space-y-6">
             <div className="space-y-2">
               <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
-                <p className="font-serif text-xl italic">Intercontinental Hotel (Barranco)</p>
+                <p className="font-serif text-xl italic">Intercontinental Hotel (Miraflores)</p>
                 <p className="font-sans text-sm font-bold">$220/noche</p>
               </div>
               <p className="text-sm opacity-80 leading-relaxed">
@@ -283,7 +283,7 @@ export default function FAQ() {
         <div className="space-y-6">
           <div className="space-y-2">
             <p className="font-serif italic text-sm tracking-metadata opacity-60">Shuttles</p>
-            <p>Habrá shuttles de la iglesia a la celebración y de regreso. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Por favor confirma tu asistencia</a> para asegurar tu lugar. Los shuttles regresan a Lima a las 11:00 PM y 1:00 AM (en cuanto se llenen) — último bus a las 3:45 AM — con parada en el <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Barranco)</a>.</p>
+            <p>Habrá shuttles de la iglesia a la celebración y de regreso. <a href="https://withjoy.com/karen-and-juanca/rsvp" target="_blank" rel="noopener noreferrer" className="font-bold underline">Por favor confirma tu asistencia</a> para asegurar tu lugar. Los shuttles regresan a Lima a las 11:00 PM y 1:00 AM (en cuanto se llenen) — último bus a las 3:45 AM — con parada en el <a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline">Intercontinental Hotel (Miraflores)</a>.</p>
             <p className="text-sm opacity-70 italic">Si te pierdes el shuttle, el local es accesible por Uber, taxi o chofer privado.</p>
           </div>
 
@@ -346,7 +346,7 @@ export default function FAQ() {
           <div className="space-y-6">
             <div className="space-y-2">
               <div className="flex justify-between items-baseline border-b border-pitch-black/10 pb-2">
-                <p className="font-serif text-xl italic">Intercontinental Hotel (Barranco)</p>
+                <p className="font-serif text-xl italic">Intercontinental Hotel (Miraflores)</p>
                 <p className="font-sans text-sm font-bold">$220/noche</p>
               </div>
               <p className="text-sm opacity-80 leading-relaxed">

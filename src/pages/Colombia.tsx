@@ -22,7 +22,7 @@ export default function Colombia() {
       details: "Sábado, 23 de mayo | 6:00 PM - 2:00 AM",
       location: "Asociación Nacional de Criadores y Propietarios de Caballos Peruanos de Paso – Mamacona",
       mapUrl: "https://www.google.com/maps/dir//ANCPCPP+(Asoc.+Nac.+De+Criadores+Y+Propietarios+De+Caballos+Peruanos+De+Paso),+P3QR%2BV6Q,+Alameda+Mamacona,+Lima+15841,+Peru/@25.7910622,-80.1763661,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9105bc87b8bbf663:0x6dfa734f18a430b6!2m2!1d-76.90938!2d-12.2602887?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D",
-      description: <>{'La fiesta.\n\nLos shuttles regresan a las 11:00 PM y 1:00 AM — el último bus sale a las 3:45 AM de vuelta al '}<a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-60 transition-opacity">Intercontinental Hotel Barranco</a>.</>
+      description: <>{'La fiesta.\n\nLos shuttles regresan a las 11:00 PM y 1:00 AM — el último bus sale a las 3:45 AM de vuelta al '}<a href="https://www.google.com/maps/place/InterContinental+Lima,+an+IHG+Hotel" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-60 transition-opacity">Intercontinental Hotel Miraflores</a>.</>
     }
   ];
 
