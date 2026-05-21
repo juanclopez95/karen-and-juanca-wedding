@@ -6,6 +6,7 @@ export default function Colombia() {
       id: "Acto I: Preludio",
       details: "Viernes, 22 de mayo | 5:00 PM",
       location: "La Carreta, San Isidro",
+      address: "Av. Ricardo Rivera Navarrete 740, San Isidro 15046, Peru",
       mapUrl: "https://www.google.com/maps/place/la+carreta+lima/data=!4m2!3m1!1s0x9105c865c4d04e5b:0x3633e9a533f74a47?sa=X&ved=1t:242&ictx=111",
       description: "Te damos la bienvenida a Lima con una noche alrededor de una Peña Tradicional Peruana.\n\nImagínate guitarras, cajón, pisco y bocados locales."
     },
@@ -133,6 +134,9 @@ export default function Colombia() {
                 <p className="text-sm md:text-lg font-serif italic opacity-80">{act.details}</p>
                 <div className="space-y-1">
                   <p className="text-sm md:text-lg font-serif italic opacity-80">{act.location}</p>
+                  {act.address && (
+                    <p className="text-[10px] tracking-[0.15em] font-sans opacity-50 mt-0.5">{act.address}</p>
+                  )}
                   <a
                     href={act.mapUrl}
                     target="_blank"
